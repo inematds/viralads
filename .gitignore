@@ -1,3 +1,8 @@
 .DS_Store
 *.log
 node_modules/
+
+# Nunca commitar segredos da ads-skill (chave da Arcads)
+.env
+**/.env
+skill-original/ads-skill/.env
