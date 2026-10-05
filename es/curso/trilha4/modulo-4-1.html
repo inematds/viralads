@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Módulo 4.1 · O fluxo com IA | Anúncios Virais com IA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217,119,6,0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5,150,105,0.12); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(220,38,38,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(220,38,38,0.25); }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha4/modulo-4-1.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha4/modulo-4-1.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha4/modulo-4-1.html" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha4/modulo-4-1.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha4/modulo-4-1.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="modulo-4-1.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Anuncios virales con IA</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Buscar</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Descomponer</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Crear</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a class="hover:text-amber-400" href="../../index.html">Inicio</a><span>/</span><a class="hover:text-amber-400" href="index.html">Ruta 4</a><span>/</span><span class="text-amber-400">Módulo 4.1</span></div></nav>
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">MÓDULO 4.1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🤖 El flujo con IA</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Tres herramientas trabajando juntas: una que piensa y coordina, una que genera el video y una plataforma que lo reúne todo. Tú entregas el molde y recibes el anuncio listo.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">6</div><div class="text-xs text-neutral-400">Temas</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">30</div><div class="text-xs text-neutral-400">Minutos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Práctico</div><div class="text-xs text-neutral-400">Nivel</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Visión</div><div class="text-xs text-neutral-400">Tipo</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
+<svg aria-label="La IA orquestadora recibe el pedido y activa el generador de video y la plataforma, y te entrega un anuncio listo" class="w-full h-auto" role="img" viewbox="0 0 1000 180">
+<defs>
+<lineargradient id="m41-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbbf24"></stop><stop offset="1" stop-color="#f59e0b"></stop></lineargradient>
+<filter height="180%" id="m41-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="m41-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#f59e0b" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="m41-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#fbbf24"></path></marker>
+<marker id="m41-ahc" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path></marker>
+</defs>
+<rect fill="url(#m41-grid)" height="180" width="1000" x="0" y="0"></rect>
+<g filter="url(#m41-glow)"><rect fill="#1f1604" height="60" rx="14" stroke="url(#m41-grad)" stroke-width="2.5" width="170" x="40" y="60"></rect></g>
+<text fill="#fbbf24" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="125" y="86">🧠 orquestador</text>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="125" y="106">coordina todo</text>
+<g fill="none" opacity="0.55" stroke="#38bdf8" stroke-width="2">
+<path d="M210,80 C320,80 340,55 440,55" marker-end="url(#m41-ahc)"></path>
+<path d="M210,100 C320,100 340,125 440,125" marker-end="url(#m41-ahc)"></path>
+</g>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<g><rect fill="#0e1b26" height="36" rx="9" stroke="#38bdf8" stroke-width="2" width="200" x="440" y="38"></rect><text fill="#bfe6ff" text-anchor="middle" x="540" y="61">🎥 generador de video</text></g>
+<g><rect fill="#0e1b26" height="36" rx="9" stroke="#38bdf8" stroke-width="2" width="200" x="440" y="106"></rect><text fill="#bfe6ff" text-anchor="middle" x="540" y="129">🏭 plataforma</text></g>
+</g>
+<path d="M640,56 C740,56 760,90 800,90" fill="none" marker-end="url(#m41-ah)" opacity="0.6" stroke="#fbbf24" stroke-width="2"></path>
+<path d="M640,124 C740,124 760,90 800,90" fill="none" marker-end="url(#m41-ah)" opacity="0.6" stroke="#fbbf24" stroke-width="2"></path>
+<g filter="url(#m41-glow)"><rect fill="#1f1604" height="60" rx="14" stroke="url(#m41-grad)" stroke-width="2.5" width="160" x="800" y="60"></rect></g>
+<text fill="#fbbf24" font-family="Inter,sans-serif" font-size="14" font-weight="700" text-anchor="middle" x="880" y="86">🎬 anuncio</text>
+<text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="880" y="106">listo</text>
+</svg>
+</div>
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🧠 El orquestador</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Piensa en una IA «directora» que recibe tu pedido, analiza el video modelo y <strong class="text-amber-400">da las órdenes</strong> para las demás herramientas. Es quien transforma «quiero un anuncio así» en pasos concretos, sin que tengas que hacerlo todo a mano.</p>
+<div class="bg-gradient-to-br from-amber-900/30 to-dark-800 rounded-xl border border-amber-500/30 p-6"><h3 class="text-lg font-semibold text-amber-400 mb-4 flex items-center"><span class="mr-2">🔑</span> El cerebro del flujo</h3><p class="text-neutral-300">El orquestador no crea el video por sí solo: lo coordina. Analiza el ejemplo, escribe el guion y activa a quien lo genera. Tú conversas con él en portugués normal.</p></div>
+</section>
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">🎥 El generador de video</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Es la herramienta que realmente <strong class="text-amber-400">crea el video</strong> con estilo UGC, a partir de una imagen e instrucciones. Es ella quien hace el «milagro» de transformar una foto del producto en un video de una persona hablando.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Cómo funciona, en resumen</h3><p class="text-neutral-300 text-sm">Le das una imagen (del producto o del actor) + un guion, y te devuelve el video. Cuanto mejor el guion, mejor el resultado.</p></div>
+</section>
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">🏭 La plataforma fábrica</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Una plataforma con una biblioteca de actores, voces y todo listo, donde armas el anuncio <strong class="text-amber-400">sin necesidad de programar</strong>. Es la forma más fácil para quien no tiene conocimientos técnicos: arrastras, eliges y generas.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">✓ Ventaja de la plataforma</h4><ul class="space-y-3 text-neutral-300 text-sm"><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>No necesitas código ni terminal.</span></li><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>Actores y voces listos para usar.</span></li></ul></div>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6"><h4 class="font-bold text-amber-400 mb-4">Cuándo vale la pena seguir el camino técnico</h4><p class="text-neutral-300 text-sm">Si tú (o alguien del equipo) sabe programar, puedes conectarlo todo mediante API y automatizarlo a gran escala. Pero no es obligatorio para empezar.</p></div>
+</div>
+</section>
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">🔄 El flujo de principio a fin</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">La secuencia completa, en cuatro pasos. Entender el flujo te permite controlar cada etapa.</p>
+<div class="space-y-4">
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold text-sm">1</span></div><div class="flex-1 bg-dark-800 rounded-xl p-4 border border-dark-600"><strong class="text-white">Modelo</strong><span class="text-neutral-400 text-sm"> — tú aportas un video ganador que descargaste en la Trilha 2.</span></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold text-sm">2</span></div><div class="flex-1 bg-dark-800 rounded-xl p-4 border border-dark-600"><strong class="text-white">Análisis</strong><span class="text-neutral-400 text-sm"> — la IA desmonta (como en Trilha 3).</span></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold text-sm">3</span></div><div class="flex-1 bg-dark-800 rounded-xl p-4 border border-dark-600"><strong class="text-white">Guion</strong><span class="text-neutral-400 text-sm"> — escribe con el mismo estilo, para tu producto.</span></div></div>
+<div class="flex items-start space-x-4"><div class="flex-shrink-0 w-10 h-10 rounded-full bg-amber-500/20 flex items-center justify-center"><span class="text-amber-400 font-bold text-sm">4</span></div><div class="flex-1 bg-dark-800 rounded-xl p-4 border border-dark-600"><strong class="text-white">Video</strong><span class="text-neutral-400 text-sm"> — el generador produce el anuncio listo.</span></div></div>
+</div>
+</section>
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">🖼️ Cambiar el producto y al actor</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">El poder multimodal: tomas un video que funciona y pides <strong class="text-amber-400">"cambia el producto por este"</strong> y «cambia al actor por este otro». Es la forma más rápida de adaptar un ganador sin perder la fórmula.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6"><h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Consejo</h3><p class="text-neutral-300">Ten siempre a mano una buena foto de tu producto (fondo limpio y bien iluminada). Es la pieza que la IA usa para colocar tu artículo en el video.</p></div>
+</section>
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-amber-500/20 text-amber-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">🧾 Del molde al guion</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Aquí se conectan las rutas: entregas el <strong class="text-amber-400">molde de la Ruta 3</strong> + una foto de tu producto, y la IA escribe el guion de tu anuncio con ese estilo ganador. Es el puente entre estudiar y producir.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex items-center space-x-2 mb-3"><span class="w-3 h-3 rounded-full bg-red-400"></span><span class="w-3 h-3 rounded-full bg-yellow-400"></span><span class="w-3 h-3 rounded-full bg-emerald-400"></span><span class="text-xs text-neutral-500 ml-2">ejemplo de solicitud a la IA (ilustrativo)</span></div>
+<p class="text-neutral-300 text-sm font-mono">"Con base en este video ganador y este molde, haz un guion de anuncio para mi producto (foto adjunta), con el mismo estilo, de unos 12 segundos, en vertical."</p>
+</div>
+</section>
+<section class="mb-12">
+<div class="bg-gradient-to-br from-amber-900/40 via-dark-800 to-dark-800 rounded-xl border border-amber-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">✅</span> Resumen del módulo</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">3 herramientas</strong><span class="text-neutral-400"> — orquestador, generador y plataforma.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Flujo de 4 pasos</strong><span class="text-neutral-400"> — modelo, análisis, guion, video.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Multimodal</strong><span class="text-neutral-400"> — cambia el producto y al actor en un video que funciona.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-amber-400 mt-1">✓</span><div><strong class="text-white">Plantilla → guion</strong><span class="text-neutral-400"> — el puente entre estudiar y producir.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-amber-400 mb-2">Siguiente módulo:</h3><p class="text-neutral-300">4.2 — Actor y voz: la voz lo es todo</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="index.html">← Volver a la Trilha</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="modulo-4-2.html">Siguiente módulo →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Anuncios Virales con IA · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p></div></footer>
+<script>
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

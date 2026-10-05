@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Anuncios virales con IA | INEMA.CLUB</title>
+<meta content="Aprende a encontrar, desmontar y recrear anuncios que venden usando IA. Curso paso a paso, lenguaje sencillo." name="description"/>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = {
+      darkMode: 'class',
+      theme: { extend: { colors: {
+        primary: '#FACC15',
+        dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' }
+      } } }
+    }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+
+    /* Light mode - base */
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+
+    /* Light mode - cores de acento (todas as trilhas) */
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5,150,105,0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:border-emerald-500\/30:hover { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-emerald-400 { color: #059669; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124,58,237,0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124,58,237,0.25); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124,58,237,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217,119,6,0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:border-amber-500\/30:hover { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-amber-400 { color: #92400e; }
+
+    /* Light mode - remove gradientes e cores especiais */
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .border-primary\/40 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+
+    /* Dark mode - bordas suaves */
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../en/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<!-- NAVIGATION -->
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="index.html">
+<span class="text-2xl">🎯</span>
+<span class="font-bold text-lg hidden sm:inline">Anuncios virales con IA</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="curso/trilha1/index.html">
+<span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="curso/trilha2/index.html">
+<span class="sm:hidden">T2</span><span class="hidden sm:inline">Buscar</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="curso/trilha3/index.html">
+<span class="sm:hidden">T3</span><span class="hidden sm:inline">Descomponer</span>
+</a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="curso/trilha4/index.html">
+<span class="sm:hidden">T4</span><span class="hidden sm:inline">Crear</span>
+</a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<!-- HERO -->
+<header class="bg-gradient-to-br from-amber-900/20 via-dark-900 to-dark-900 py-16 sm:py-24 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-primary/10 text-primary text-xs font-semibold rounded-full mb-5 border border-primary/30">CURSO COMPLETO · DESDE CERO</span>
+<h1 class="text-4xl sm:text-5xl font-bold mb-6 max-w-3xl leading-tight">Anuncios que <span class="text-primary">venden de verdad</span> — encontrados, entendidos y recreados con IA</h1>
+<p class="text-lg text-neutral-300 max-w-2xl mb-8 leading-relaxed">
+        No necesitas inventar nada. Vamos <strong class="text-amber-400">buscar</strong> los anuncios que ya están vendiendo,
+        <strong class="text-purple-400">entender</strong> por qué funcionan y <strong class="text-emerald-400">recrear</strong>
+        tu versión con inteligencia artificial. Explicado en lenguaje sencillo, paso a paso.
+      </p>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="text-center px-7 py-3.5 bg-primary text-dark-900 rounded-lg font-bold hover:brightness-110 transition" href="curso/trilha1/index.html">Empezar por la Ruta 1 →</a>
+<a class="text-center px-7 py-3.5 bg-dark-700 text-neutral-100 rounded-lg font-semibold hover:bg-dark-600 transition" href="#trilhas">Ver las 4 rutas</a>
+</div>
+<!-- Prova / números -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-4 mt-12 max-w-3xl">
+<div class="bg-dark-800/60 rounded-xl p-4 border border-dark-600">
+<div class="text-2xl font-bold text-emerald-400">~10x</div>
+<div class="text-xs text-neutral-400 mt-1">conversión del UGC vs. anuncio tradicional</div>
+</div>
+<div class="bg-dark-800/60 rounded-xl p-4 border border-dark-600">
+<div class="text-2xl font-bold text-blue-400">50%</div>
+<div class="text-xs text-neutral-400 mt-1">más barato por clic</div>
+</div>
+<div class="bg-dark-800/60 rounded-xl p-4 border border-dark-600">
+<div class="text-2xl font-bold text-amber-400">90%</div>
+<div class="text-xs text-neutral-400 mt-1">de los anuncios mueren en 60 días</div>
+</div>
+<div class="bg-dark-800/60 rounded-xl p-4 border border-dark-600">
+<div class="text-2xl font-bold text-purple-400">R$ 0</div>
+<div class="text-xs text-neutral-400 mt-1">para espiar los anuncios de la competencia</div>
+</div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<!-- Para quem é -->
+<section class="mb-16">
+<div class="bg-gradient-to-br from-amber-900/20 to-dark-800 rounded-2xl border border-amber-500/30 p-8">
+<h2 class="text-2xl font-bold mb-4">📌 Para quién es este curso</h2>
+<p class="text-neutral-300 mb-4 leading-relaxed max-w-3xl">
+          Para quien tiene un negocio, un producto o un servicio y quiere anunciarse <strong class="text-amber-400">sin
+          gastar una fortuna</strong> y sin necesidad de ser un influencer joven. Cada concepto se explica desde el principio,
+          con calma y con ejemplos de la vida cotidiana. Si sabes usar WhatsApp y el navegador, puedes seguirlo.
+        </p>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-4 mt-6">
+<div class="bg-dark-800/60 rounded-lg p-4 border border-dark-600"><span class="text-amber-400 font-semibold">Dueño de negocio</span><p class="text-sm text-neutral-400 mt-1">que quiere dejar de tirar el dinero en anuncios que no venden.</p></div>
+<div class="bg-dark-800/60 rounded-lg p-4 border border-dark-600"><span class="text-amber-400 font-semibold">Quienes venden en línea</span><p class="text-sm text-neutral-400 mt-1">tienda, infoproducto, servicio — y quieres copiar lo que ya da resultado.</p></div>
+<div class="bg-dark-800/60 rounded-lg p-4 border border-dark-600"><span class="text-amber-400 font-semibold">Persona curiosa por la IA</span><p class="text-sm text-neutral-400 mt-1">que quiere ver a la IA haciendo algo útil y rentable en la práctica.</p></div>
+</div>
+</div>
+</section>
+<!-- Trilhas -->
+<section class="mb-8" id="trilhas">
+<h2 class="text-3xl font-bold mb-2">Las 4 rutas del curso</h2>
+<p class="text-neutral-400 mb-8 max-w-2xl">Sigue el orden. Cada ruta es un paso del método: <strong>Buscar → Entender → Recrear</strong>.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<!-- T1 -->
+<a class="group bg-dark-800 rounded-2xl border border-dark-600 hover:border-emerald-500/30 p-7 transition-all" href="curso/trilha1/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full">RUTA 1</span>
+<span class="text-xs text-neutral-500">3 módulos · ~1h30</span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-emerald-400 transition-colors">🧱 Fundamentos</h3>
+<p class="text-neutral-400 text-sm leading-relaxed">Por qué el anuncio que «parece hecho por una persona común» vende hasta 10x más. La mentalidad del cazador: copia lo que ya funciona en vez de inventar.</p>
+</a>
+<!-- T2 -->
+<a class="group bg-dark-800 rounded-2xl border border-dark-600 hover:border-blue-500/30 p-7 transition-all" href="curso/trilha2/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full">RUTA 2</span>
+<span class="text-xs text-neutral-500">3 módulos · ~1h30</span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-blue-400 transition-colors">🔎 Buscar</h3>
+<p class="text-neutral-400 text-sm leading-relaxed">Las bibliotecas gratuitas de Meta y TikTok son tu "archivo de espionaje". Aprende a encontrar los anuncios ganadores y las 4 señales que revelan a un ganador.</p>
+</a>
+<!-- T3 -->
+<a class="group bg-dark-800 rounded-2xl border border-dark-600 hover:border-purple-500/30 p-7 transition-all" href="curso/trilha3/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full">RUTA 3</span>
+<span class="text-xs text-neutral-500">3 módulos · ~1h30</span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-purple-400 transition-colors">🔬 Desconstruir</h3>
+<p class="text-neutral-400 text-sm leading-relaxed">Las 5 dimensiones para analizar cualquier anuncio, la lectura cuadro por cuadro y cómo catalogar 15-20 anuncios hasta que los patrones ganadores aparezcan por sí solos.</p>
+</a>
+<!-- T4 -->
+<a class="group bg-dark-800 rounded-2xl border border-dark-600 hover:border-amber-500/30 p-7 transition-all" href="curso/trilha4/index.html">
+<div class="flex items-center justify-between mb-3">
+<span class="px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full">RUTA 4</span>
+<span class="text-xs text-neutral-500">3 módulos · ~1h30</span>
+</div>
+<h3 class="text-2xl font-bold mb-2 group-hover:text-amber-400 transition-colors">🎬 Crear</h3>
+<p class="text-neutral-400 text-sm leading-relaxed">Produce tu propio anuncio UGC con IA: elige al actor adecuado, descubre por qué la voz lo es todo, genera variaciones para probar y protege tus contraseñas.</p>
+</a>
+</div>
+</section>
+<!-- O método em 3 passos -->
+<section class="mt-16">
+<div class="bg-dark-800 rounded-2xl border border-dark-600 p-8">
+<h2 class="text-2xl font-bold mb-6">🧭 El método en 3 pasos</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6">
+<div class="text-blue-400 font-bold text-lg mb-2">1. Buscar</div>
+<p class="text-sm text-neutral-300">Encontrar los anuncios que ya están vendiendo (no los que parecen bonitos).</p>
+</div>
+<div class="bg-purple-900/20 rounded-xl border border-purple-500/30 p-6">
+<div class="text-purple-400 font-bold text-lg mb-2">2. Entender</div>
+<p class="text-sm text-neutral-300">Descubrir <em>por qué</em> funcionan: el gancho, el ritmo, la voz, la llamada a la acción.</p>
+</div>
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6">
+<div class="text-emerald-400 font-bold text-lg mb-2">3. Recrear</div>
+<p class="text-sm text-neutral-300">Hacer tu versión, con tu producto, y probar varias hasta encontrar la ganadora.</p>
+</div>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>Anuncios Virales con IA · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p>
+</div>
+</footer>
+<script>
+    const themeToggle = document.getElementById('theme-toggle');
+    const themeToggleDarkIcon = document.getElementById('theme-toggle-dark-icon');
+    const themeToggleLightIcon = document.getElementById('theme-toggle-light-icon');
+    const html = document.documentElement;
+    if (localStorage.getItem('theme') === 'light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))) {
+      themeToggleDarkIcon.classList.remove('hidden'); html.classList.remove('dark');
+    } else { themeToggleLightIcon.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', () => {
+      themeToggleDarkIcon.classList.toggle('hidden');
+      themeToggleLightIcon.classList.toggle('hidden');
+      html.classList.toggle('dark');
+      localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
+    });
+  </script>
+</body>
+</html>

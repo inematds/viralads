@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 2.3 · Ad List and Download | Viral Ads with AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5,150,105,0.12); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(220,38,38,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(220,38,38,0.25); }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha2/modulo-2-3.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha2/modulo-2-3.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha2/modulo-2-3.html" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha2/modulo-2-3.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-2-3.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha2/modulo-2-3.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Viral Ads with AI</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hunt</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Deconstruct</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Create</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a class="hover:text-blue-400" href="../../index.html">Beginner</a><span>/</span><a class="hover:text-blue-400" href="index.html">Track 2</a><span>/</span><span class="text-blue-400">Module 2.3</span></div></nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">MODULE 2.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">📥 List of competitors and download ads</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Build your list of brands to watch and learn to download any ad with a free browser extension. By the end, you’ll have a collection of winning ads ready to study.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Tool</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
+<svg aria-label="From the competitor list, sort and filter, download with the extension, and build a collection of top-performing ads" class="w-full h-auto" role="img" viewbox="0 0 1000 170">
+<defs>
+<lineargradient id="m23-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
+<filter height="180%" id="m23-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="m23-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#3b82f6" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="m23-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#60a5fa"></path></marker>
+</defs>
+<rect fill="url(#m23-grid)" height="170" width="1000" x="0" y="0"></rect>
+<rect fill="#0e1622" height="54" rx="12" stroke="#60a5fa" stroke-width="2" width="180" x="30" y="58"></rect><text fill="#60a5fa" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="120" y="82">1 · List</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="120" y="100">20-30 brands</text>
+<path d="M210,85 L270,85" fill="none" marker-end="url(#m23-ah)" opacity="0.7" stroke="#60a5fa" stroke-width="2"></path>
+<rect fill="#0e1622" height="54" rx="12" stroke="#60a5fa" stroke-width="2" width="180" x="270" y="58"></rect><text fill="#60a5fa" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="360" y="82">2 · Filter</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="360" y="100">impressions + 30 days</text>
+<path d="M450,85 L510,85" fill="none" marker-end="url(#m23-ah)" opacity="0.7" stroke="#60a5fa" stroke-width="2"></path>
+<rect fill="#0e1622" height="54" rx="12" stroke="#60a5fa" stroke-width="2" width="180" x="510" y="58"></rect><text fill="#60a5fa" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="600" y="82">3 · Download</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="600" y="100">extension, 1 click</text>
+<path d="M690,85 L750,85" fill="none" marker-end="url(#m23-ah)" opacity="0.7" stroke="#60a5fa" stroke-width="2"></path>
+<g filter="url(#m23-glow)"><rect fill="#0e1622" height="62" rx="14" stroke="url(#m23-grad)" stroke-width="2.5" width="210" x="750" y="54"></rect></g>
+<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="855" y="80">4 · Archive</text><text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="855" y="100">saved winners</text>
+</svg>
+</div>
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">📝 List of 20-30 brands</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Build a list of <strong class="text-blue-400">20 to 30 competitors</strong> that compete for the same customer as you. With a fixed list, you keep an eye on the same brands and quickly notice what’s starting to catch on.</p>
+<div class="bg-gradient-to-br from-blue-900/30 to-dark-800 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">🔑</span> How to put it together</h3><p class="text-neutral-300">Write this down in a notebook or simple spreadsheet: brand name + link to its library. Revisit this list every week.</p></div>
+</section>
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">🎯 Target the Same Audience</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Choose brands that speak to the <strong class="text-blue-400">same person</strong> you want to reach—the same age, the same problem, the same desire. An ad that works for another audience may not work for yours.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6"><h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Define your avatar</h3><p class="text-neutral-300">In one sentence: who is your ideal customer? E.g., "a 45- to 60-year-old woman who wants to take care of her health without complications." Target brands that speak to her.</p></div>
+</section>
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">↕️ Sort by impressions</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Within each brand's library, sort the ads by <strong class="text-blue-400">highest impressions</strong>. The top ones are where the money is—the most likely winners.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> Rule of thumb</h3><p class="text-neutral-300 text-sm">Don't try to look at 200 ads. Look at the top 5-10 from each brand. That's where the winning formula is.</p></div>
+</section>
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">✅ Cross-check the duration</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Before copying, confirm that the ad has been running for <strong class="text-blue-400">at least 30 days</strong>. It’s no use copying something that’s been around for 5 days—you can’t tell yet whether it sells.</p>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="bg-emerald-900/20 rounded-xl border border-emerald-500/30 p-6"><h4 class="font-bold text-emerald-400 mb-4">✓ Green light</h4><ul class="space-y-3 text-neutral-300 text-sm"><li class="flex items-start space-x-2"><span class="text-emerald-400">✓</span><span>High impressions + 30 days or more running.</span></li></ul></div>
+<div class="bg-red-900/20 rounded-xl border border-red-500/30 p-6"><h4 class="font-bold text-red-400 mb-4">✗ Wait longer</h4><ul class="space-y-3 text-neutral-300 text-sm"><li class="flex items-start space-x-2"><span class="text-red-400">✗</span><span>Live for only a few days — it’s still too early to trust.</span></li></ul></div>
+</div>
+</section>
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">🧩 The download extension</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">There's a free browser extension, <a class="text-blue-400 hover:text-blue-300 font-semibold underline" href="https://chromewebstore.google.com/detail/ad-library-downloader/gojmmkhaiojimnnjhhilmhjmhdbdagod" target="_blank">Ad Library Downloader</a>, which adds a <strong class="text-blue-400">download button</strong> on top of the library ads. You install it, refresh the page, and the button appears.</p>
+<div class="bg-dark-800 rounded-xl border border-dark-600 p-6">
+<div class="flex items-center space-x-2 mb-3"><span class="w-3 h-3 rounded-full bg-red-400"></span><span class="w-3 h-3 rounded-full bg-yellow-400"></span><span class="w-3 h-3 rounded-full bg-emerald-400"></span><span class="text-xs text-neutral-500 ml-2">step by step (illustrative)</span></div>
+<ol class="space-y-2 text-neutral-300 text-sm font-mono">
+<li>1. Install the extension from your browser’s store (Chrome/Brave).</li>
+<li>2. Open the ad library.</li>
+<li>3. Refresh the page (F5).</li>
+<li>4. A “download” button appears on each ad.</li>
+</ol>
+</div>
+</section>
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-blue-500/20 text-blue-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">💾 Download and Build Your Collection</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">With the extension enabled, one click saves the ad video to your computer. Do this with the top performers and you create a <strong class="text-blue-400">golden collection</strong> to study and recreate in Tracks 3 and 4.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6"><h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">✏️</span> Final track exercise</h3><p class="text-neutral-300">Download 3 winning ads in your niche and save them in a folder called “models.” They’ll be the raw material for the next track.</p></div>
+</section>
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/40 via-dark-800 to-dark-800 rounded-xl border border-blue-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">✅</span> Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">List of 20-30 brands</strong><span class="text-neutral-400"> — keep watching the same targets.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Same audience</strong><span class="text-neutral-400"> — choose who speaks to your customer.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Sort and cross-reference duration</strong><span class="text-neutral-400"> — top impressions + 30 days.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-blue-400 mt-1">✓</span><div><strong class="text-white">Download and save</strong><span class="text-neutral-400"> — build a library of winners.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-blue-400 mb-2">Next Track:</h3><p class="text-neutral-300">Track 3 — Deconstruct: understand why these ads work</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-2-2.html">← Previous module</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="../trilha3/index.html">Go to Track 3 →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Viral Ads with AI · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p></div></footer>
+<script>
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

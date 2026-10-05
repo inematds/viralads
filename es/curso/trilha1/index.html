@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ruta 1 · Fundamentos | Anuncios virales con IA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5,150,105,0.12); }
+    html:not(.dark) .bg-emerald-500\/10 { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .hover\:bg-emerald-500\/30:hover { background-color: rgba(5,150,105,0.18); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .hover\:border-emerald-500\/30:hover { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-emerald-400 { color: #059669; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha1/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha1/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha1/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha1/" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha1/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Anuncios virales con IA</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-emerald-400 bg-emerald-500/10" href="index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Buscar</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Descomponer</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Crear</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-emerald-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-emerald-500/20 text-emerald-400 text-xs font-semibold rounded-full mb-4">RUTA 1</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🧱 Fundamentos</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Antes de buscar cualquier anuncio, necesitas entender una sola cosa: por qué un anuncio que <strong class="text-emerald-400">parece hecho por una persona común</strong> vende mucho más que un comercial caro. Y por qué el camino más inteligente es copiar lo que ya funciona.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">3</div><div class="text-xs text-neutral-400">Módulos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">18</div><div class="text-xs text-neutral-400">Temas</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">~1h30</div><div class="text-xs text-neutral-400">Duración</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-emerald-400">Básico</div><div class="text-xs text-neutral-400">Nivel</div></div>
+</div>
+<!-- HERO SVG -->
+<div class="rounded-2xl border border-emerald-500/30 bg-dark-900/40 p-3 sm:p-4 mt-8 overflow-hidden">
+<svg aria-label="Un anuncio corporativo genera poca confianza y pocas ventas; un anuncio de una persona común (UGC) genera mucha confianza y muchas ventas" class="w-full h-auto" role="img" viewbox="0 0 1000 250">
+<defs>
+<lineargradient id="t1h-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#34d399"></stop><stop offset="1" stop-color="#10b981"></stop></lineargradient>
+<filter height="180%" id="t1h-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="t1h-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#10b981" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="t1h-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#34d399"></path></marker>
+<marker id="t1h-ahg" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#9ca3af"></path></marker>
+</defs>
+<rect fill="url(#t1h-grid)" height="250" width="1000" x="0" y="0"></rect>
+<!-- linha de cima: anúncio comum -->
+<rect fill="#26201a" height="56" rx="12" stroke="#9ca3af" stroke-width="2" width="200" x="40" y="40"></rect>
+<text fill="#e5e7eb" font-family="Inter,sans-serif" font-size="15" font-weight="600" text-anchor="middle" x="140" y="66">Comercial caro</text>
+<text fill="#9ca3af" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="140" y="85">"esto es un anuncio"</text>
+<path d="M240,68 L430,68" fill="none" marker-end="url(#t1h-ahg)" opacity="0.6" stroke="#9ca3af" stroke-width="1.8"></path>
+<rect fill="#26201a" height="48" rx="11" stroke="#9ca3af" stroke-width="2" width="190" x="430" y="44"></rect>
+<text fill="#cbd5e1" font-family="Inter,sans-serif" font-size="13.5" text-anchor="middle" x="525" y="73">poca confianza</text>
+<path d="M620,68 L780,68" fill="none" marker-end="url(#t1h-ahg)" opacity="0.6" stroke="#9ca3af" stroke-width="1.8"></path>
+<rect fill="#26201a" height="48" rx="11" stroke="#9ca3af" stroke-width="2" width="180" x="780" y="44"></rect>
+<text fill="#cbd5e1" font-family="Inter,sans-serif" font-size="13.5" text-anchor="middle" x="870" y="73">pocas ventas</text>
+<!-- linha de baixo: UGC -->
+<g filter="url(#t1h-glow)"><rect fill="#0e2018" height="56" rx="12" stroke="url(#t1h-grad)" stroke-width="2.5" width="200" x="40" y="158"></rect></g>
+<text fill="#34d399" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="140" y="184">Persona común (UGC)</text>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="140" y="203">"parece un consejo"</text>
+<path d="M240,186 L430,186" fill="none" marker-end="url(#t1h-ah)" opacity="0.7" stroke="#34d399" stroke-width="2"></path>
+<rect fill="#0e2018" height="48" rx="11" stroke="#34d399" stroke-width="2" width="190" x="430" y="162"></rect>
+<text fill="#a7f3d0" font-family="Inter,sans-serif" font-size="13.5" text-anchor="middle" x="525" y="191">mucha confianza</text>
+<path d="M620,186 L780,186" fill="none" marker-end="url(#t1h-ah)" opacity="0.7" stroke="#34d399" stroke-width="2"></path>
+<rect fill="#0e2018" height="48" rx="11" stroke="#34d399" stroke-width="2" width="180" x="780" y="162"></rect>
+<text fill="#6ee7b7" font-family="Inter,sans-serif" font-size="13.5" font-weight="600" text-anchor="middle" x="870" y="191">~10x más ventas</text>
+</svg>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<!-- MAPA DA TRILHA -->
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Mapa de la ruta</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-1">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🤝 Qué es UGC</h3>
+<p class="text-xs text-neutral-400">La gente común vende más</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-2">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">🧭 Mentalidad del cazador</h3>
+<p class="text-xs text-neutral-400">No reinventes la rueda</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-emerald-500/30 p-5 transition-all" href="#modulo-1-3">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold text-sm">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-emerald-400 transition-colors">⏳ Ciclo de vida del anuncio</h3>
+<p class="text-xs text-neutral-400">El 90% muere en 60 días</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6">Contenido detallado</h2>
+<!-- MÓDULO 1.1 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🤝 Qué es UGC y por qué vende más</h3>
+<p class="text-neutral-400 text-sm">UGC es un anuncio que parece hecho por una persona de verdad. Ese «estilo de gente» reduce la desconfianza y ayuda a vender mucho más.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">📹</span>
+<div><span class="font-medium">Qué significa UGC</span><span class="text-neutral-500 text-sm ml-2">- contenido de gente común</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">UGC significa «contenido generado por el usuario». En la práctica: un video en el que una persona común habla del producto mirando a la cámara del celular, como si le estuviera dando un consejo a un amigo.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es el formato de anuncio que más crece y mejor convierte hoy. Entender el concepto es el primer paso para dejar de hacer «comerciales» y empezar a hacer «recomendaciones».</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Celular, no estudio. Persona, no marca. Conversación, no locución. Parece orgánico, pero es un anuncio pagado.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🚧</span>
+<div><span class="font-medium">La barrera de la confianza</span><span class="text-neutral-500 text-sm ml-2">- por qué lo «comercial» repele</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuando algo «huele a anuncio» —formal, perfecto, corporativo—, la persona se pone a la defensiva de inmediato. Existe una desconfianza automática.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Todo el poder del UGC viene de derribar esa barrera. Si entiendes qué activa el "modo desconfiado" del cliente, sabes qué evitar.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Demasiado perfecto = sospechoso. Gente real = confiable. La confianza va antes que la venta.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📊</span>
+<div><span class="font-medium">Los números del UGC</span><span class="text-neutral-500 text-sm ml-2">- la prueba en los datos</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Los datos del mercado muestran que el UGC convierte cerca de 10x más, con un clic 300% mejor, un costo por clic ~50% menor y un engagement ~73% mayor que el anuncio de marca.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Los números sacan la decisión del terreno de las suposiciones. Empiezas a invertir en el formato con la mejor relación entre costo y resultados.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">~10x de conversión · +300% de clics · −50% de costo por clic · +73% de interacción.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">👁️</span>
+<div><span class="font-medium">La barrera de mirar</span><span class="text-neutral-500 text-sm ml-2">- por qué se saltan tu anuncio</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">En el feed, la persona decide en 1 segundo si sigue viendo. Si el video grita "anuncio", el dedo ya se desliza hacia abajo.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Si nadie lo ve, nada más importa. El UGC gana esta primera batalla porque parece un video cualquiera del feed.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Los primeros 3 segundos lo deciden todo. Parecer nativo del feed = más gente mirando.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🪞</span>
+<div><span class="font-medium">Por qué lo «auténtico» vende</span><span class="text-neutral-500 text-sm ml-2">- el efecto de recomendación</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Confiamos más en las personas que en las marcas. Un video de una persona común funciona como la recomendación de alguien conocido: «mira lo que descubrí».</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Saber que estás vendiendo "una recomendación" y no "un producto" cambia el tono de todo lo que creas.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Prueba social. Boca a boca a gran escala. Tono de amigo, no de vendedor.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">🛒</span>
+<div><span class="font-medium">Dónde encaja el UGC en tu negocio</span><span class="text-neutral-500 text-sm ml-2">- aplicación práctica</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Sirve para tiendas, servicios, infoproductos, restaurantes: cualquier cosa que dependa de que la gente haga clic y compre después de ver un video.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Para que ya empieces a pensar en cuál de tus productos será el primero que pondrás a prueba con UGC.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Empieza por el producto que más quieres vender. Un video, un producto, una llamada clara.</p></div>
+</div></div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-1')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-1.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 1.2 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🧭 La mentalidad del cazador</h3>
+<p class="text-neutral-400 text-sm">El gran cambio: no necesitas ser creativo desde cero. Necesitas saber encontrar lo que ya está vendiendo y copiar la estructura con inteligencia.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">🎯</span>
+<div><span class="font-medium">No reinventes la rueda</span><span class="text-neutral-500 text-sm ml-2">- la regla de oro</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Es rarísimo acertar con un anuncio inédito a la primera. El camino inteligente es partir de lo que ya demostró que vende y hacer tu propia versión.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Ahorra dinero y tiempo. Reduces el riesgo de probar desde cero y partes de algo validado por el mercado.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La rueda ya existe. Adapta, no inventes. Menor riesgo, resultados más rápidos.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">🔭</span>
+<div><span class="font-medium">Buscar, estudiar, lanzar</span><span class="text-neutral-500 text-sm ml-2">- el ciclo del método</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Tres movimientos: buscar (encontrar lo que vende), estudiar (entender por qué) y lanzar (hacer tu versión y probarla).</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es el mapa de todo el curso. Cada trilha que sigue es uno de estos tres pasos.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Buscar = Ruta 2. Estudiar = Ruta 3. Lanzar = Ruta 4.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📚</span>
+<div><span class="font-medium">El archivo de espionaje</span><span class="text-neutral-500 text-sm ml-2">- el concepto de swipe file</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las bibliotecas de anuncios de Meta y TikTok son públicas y gratuitas. Todo lo que tus competidores están publicando está ahí, a la vista.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Tienes un "archivo de inspiración" infinito y gratis. Es tu principal fuente de ideas validadas.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Público y gratis. Mira cualquier marca. Colección personal de anuncios que funcionan.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🧪</span>
+<div><span class="font-medium">Copiar la estructura, no plagiar</span><span class="text-neutral-500 text-sm ml-2">- la línea ética e inteligente</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Tú copias la <em>estructura</em> lo que funciona (el tipo de gancho, el ritmo, el llamado a la acción), no el producto ni las imágenes de la competencia.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es la diferencia entre inspirarte de forma inteligente y hacer una copia barata que nadie respeta.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La estructura sí, el contenido no. La misma fórmula, tu marca y tu producto.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🔁</span>
+<div><span class="font-medium">El ganador se convierte en 100 versiones</span><span class="text-neutral-500 text-sm ml-2">- el secreto de las variaciones</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuando una marca encuentra un anuncio ganador, hace decenas de pequeñas variaciones (camisa azul, camisa roja, dentro de casa, en la calle...).</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es una señal de oro: muchas variantes del mismo anuncio = esa fórmula está vendiendo. Aprendes a leer esta señal.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Muchas variantes = ganador. Pequeños cambios, misma fórmula.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">⚖️</span>
+<div><span class="font-medium">Anuncia solo lo que ya tiene tracción</span><span class="text-neutral-500 text-sm ml-2">- el filtro de la resonancia</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Vale la pena impulsar con anuncios aquello que ya da señales de vida: vende de forma orgánica o ya funciona en los anuncios de otros. No fuerces algo que nunca se ha probado.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Evita gastar dinero impulsando un producto que el mercado aún no quiso.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Señal antes de escalar. Orgánico o anuncio probado. Acelera lo que ya funciona.</p></div>
+</div></div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-2')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-2.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 1.3 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-1-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-emerald-400 font-bold">1.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">⏳ El ciclo de vida del anuncio</h3>
+<p class="text-neutral-400 text-sm">Un anuncio es algo vivo: nace, algunos se vuelven ganadores y la mayoría muere rápido. Aprender a leer esas señales es lo que distingue al aficionado del cazador.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span>
+<span class="text-lg">⏳</span>
+<div><span class="font-medium">El 90% muere en 60 días</span><span class="text-neutral-500 text-sm ml-2">- la dura realidad</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La gran mayoría de los anuncios deja de estar activo en un plazo de 60 días porque no dio resultado y la empresa lo retiró.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Quienes sobreviven mucho tiempo son exactamente quienes quieres estudiar. La "muerte" de los demás te revela a los ganadores.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Los anuncios malos se descartan rápido. Sobrevivir = prueba de que vende.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span>
+<span class="text-lg">📅</span>
+<div><span class="font-medium">Tiempo al aire = salud</span><span class="text-neutral-500 text-sm ml-2">- 30 días está bien, 60+ unicornio</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuanto más tiempo lleva circulando un anuncio, más probable es que esté dando ganancias. 30 días ya es una buena señal; 60+ es un "unicornio".</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">La fecha de inicio aparece en la biblioteca de anuncios. Es el primer filtro para separar lo que vale la pena estudiar.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">≥30 días = legítimo. ≥60 días = ganador poco común. Revisa la fecha de inicio.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span>
+<span class="text-lg">📈</span>
+<div><span class="font-medium">Impresiones = dinero invertido</span><span class="text-neutral-500 text-sm ml-2">- el termómetro de apuestas</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las impresiones son la cantidad de veces que se mostró el anuncio. Muchas impresiones indican que la empresa está invirtiendo mucho dinero ahí.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Nadie invierte mucho en un anuncio que no da resultados. Muchas impresiones son una pista de que puede ser ganador.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Impresión = visualización. Más impresiones = mayor inversión = más probabilidades de vender.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span>
+<span class="text-lg">🧬</span>
+<div><span class="font-medium">Número de variantes</span><span class="text-neutral-500 text-sm ml-2">- confianza en el ganador</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuando ves muchas copias casi idénticas del mismo anuncio circulando al mismo tiempo, la marca encontró una fórmula que funciona.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es una de las señales más confiables. Cuenta las variantes: muchas = fórmula ganadora confirmada.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Muchas variantes = apuesta fuerte. Cuenta cuántas versiones hay.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span>
+<span class="text-lg">🚀</span>
+<div><span class="font-medium">Picos de volumen</span><span class="text-neutral-500 text-sm ml-2">- varios anuncios a la vez</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuando una marca lanza 15-20 anuncios nuevos de una vez, en varios lugares, está apostando fuerte por esa idea.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Los picos así suelen marcar el nacimiento de una campaña ganadora. Vale la pena estar atento.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Lanzamiento masivo = apuesta. Varios canales al mismo tiempo = confianza.</p></div>
+</div></div>
+</div>
+<div class="topic-item">
+<button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)">
+<span class="w-6 h-6 rounded-full bg-emerald-500/20 text-emerald-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span>
+<span class="text-lg">♻️</span>
+<div><span class="font-medium">Los patrones aparecen con el volumen</span><span class="text-neutral-500 text-sm ml-2">- probar siempre</span></div>
+</button>
+<div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9">
+<div><span class="text-emerald-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Después de analizar y publicar de 50 a 100 anuncios, empiezan a aparecer patrones claros, y entonces puedes ampliar lo que funciona.</p></div>
+<div><span class="text-emerald-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Te quita la presión de acertar a la primera. El juego consiste en volumen + observación + repetir al ganador.</p></div>
+<div><span class="text-emerald-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">El volumen revela patrones. Prueba, observa, escala. Paciencia con método.</p></div>
+</div></div>
+</div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-1-3')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-emerald-600 hover:bg-emerald-500 text-white rounded-lg transition-colors" href="modulo-1-3.html">Ver completo</a>
+</div>
+</div>
+<!-- Navegação entre trilhas -->
+<div class="flex flex-col sm:flex-row gap-4 mt-10">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../../index.html">← Inicio</a>
+<a class="flex-1 text-center px-6 py-3 bg-emerald-600 text-white rounded-lg font-semibold hover:bg-emerald-500 transition-colors" href="../trilha2/index.html">Siguiente: Ruta 2 · Buscar →</a>
+</div>
+</main>
+<!-- MODAIS -->
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-1" onclick="if(event.target === this) closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
+<div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.1</span><span class="font-semibold">Qué es UGC y por qué vende más</span></div>
+<button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button>
+</div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-1.html"></iframe>
+</div>
+</div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-2" onclick="if(event.target === this) closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
+<div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.2</span><span class="font-semibold">La mentalidad del cazador</span></div>
+<button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button>
+</div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-2.html"></iframe>
+</div>
+</div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-1-3" onclick="if(event.target === this) closeModal()">
+<div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600">
+<div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0">
+<div class="flex items-center space-x-3"><span class="text-emerald-400 font-bold">1.3</span><span class="font-semibold">El ciclo de vida del anuncio</span></div>
+<button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button>
+</div>
+<iframe class="flex-1 w-full rounded-b-xl" src="modulo-1-3.html"></iframe>
+</div>
+</div>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>Anuncios Virales con IA · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p>
+</div>
+</footer>
+<script>
+    function toggleTopic(button) {
+      const topicItem = button.closest('.topic-item');
+      const explanation = topicItem.querySelector('.topic-explanation');
+      const moduleCard = button.closest('.bg-dark-800');
+      moduleCard.querySelectorAll('.topic-explanation.active').forEach(exp => { if (exp !== explanation) exp.classList.remove('active'); });
+      explanation.classList.toggle('active');
+    }
+    function openModal(id){ const m=document.getElementById(id); if(m){ m.classList.remove('hidden'); document.body.style.overflow='hidden'; } }
+    function closeModal(){ document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden')); document.body.style.overflow='auto'; }
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

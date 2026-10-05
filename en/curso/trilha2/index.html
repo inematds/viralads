@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Track 2 · Hunt | Viral Ads with AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .bg-blue-500\/10 { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:bg-blue-500\/30:hover { background-color: rgba(37,99,235,0.18); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .hover\:border-blue-500\/30:hover { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-blue-400 { color: #2563eb; }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha2/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha2/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha2/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha2/" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="./" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha2/" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html">
+<span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Viral Ads with AI</span>
+</a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-blue-400 bg-blue-500/10" href="index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hunt</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Deconstruct</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Create</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-blue-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-blue-500/20 text-blue-400 text-xs font-semibold rounded-full mb-4">TRACK 2</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔎 Hunt</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Time to get hands-on. The ad libraries of <strong class="text-blue-400">Meta and TikTok</strong> are public and free—your ad spy archive. Here you’ll learn how to find winning ads and read the 4 signals that give a winner away.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">3</div><div class="text-xs text-neutral-400">Modules</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">18</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">~1h30</div><div class="text-xs text-neutral-400">Duration</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-blue-400">Practical</div><div class="text-xs text-neutral-400">Level</div></div>
+</div>
+<div class="rounded-2xl border border-blue-500/30 bg-dark-900/40 p-3 sm:p-4 mt-8 overflow-hidden">
+<svg aria-label="From Meta and TikTok's libraries, filter by signals to find winning ads" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="t2h-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#60a5fa"></stop><stop offset="1" stop-color="#3b82f6"></stop></lineargradient>
+<filter height="180%" id="t2h-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="t2h-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#3b82f6" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="t2h-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#60a5fa"></path></marker>
+</defs>
+<rect fill="url(#t2h-grid)" height="200" width="1000" x="0" y="0"></rect>
+<rect fill="#0e1622" height="50" rx="11" stroke="#60a5fa" stroke-width="2" width="190" x="40" y="40"></rect>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="14" text-anchor="middle" x="135" y="71">Meta Library</text>
+<rect fill="#0e1622" height="50" rx="11" stroke="#60a5fa" stroke-width="2" width="190" x="40" y="110"></rect>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="14" text-anchor="middle" x="135" y="141">TikTok Library</text>
+<path d="M230,65 C340,65 360,95 430,100" fill="none" marker-end="url(#t2h-ah)" opacity="0.65" stroke="#60a5fa" stroke-width="2"></path>
+<path d="M230,135 C340,135 360,105 430,100" fill="none" marker-end="url(#t2h-ah)" opacity="0.65" stroke="#60a5fa" stroke-width="2"></path>
+<rect fill="#0e1622" height="52" rx="12" stroke="#60a5fa" stroke-width="2" width="200" x="430" y="74"></rect>
+<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="15" font-weight="600" text-anchor="middle" x="530" y="98">filter</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="530" y="116">time · impressions · variations</text>
+<path d="M630,100 L720,100" fill="none" marker-end="url(#t2h-ah)" opacity="0.7" stroke="#60a5fa" stroke-width="2"></path>
+<g filter="url(#t2h-glow)"><rect fill="#0e1622" height="60" rx="14" stroke="url(#t2h-grad)" stroke-width="2.5" width="240" x="720" y="70"></rect></g>
+<text fill="#60a5fa" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="840" y="96">ads</text>
+<text fill="#bfdbfe" font-family="Inter,sans-serif" font-size="13" text-anchor="middle" x="840" y="116">winners</text>
+</svg>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Track map</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all" href="#modulo-2-1">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🔎 Free libraries</h3>
+<p class="text-xs text-neutral-400">Meta and TikTok, for free</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all" href="#modulo-2-2">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">🚩 The 4 signals</h3>
+<p class="text-xs text-neutral-400">How to recognize a top performer</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-5 transition-all" href="#modulo-2-3">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold text-sm">2.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-blue-400 transition-colors">📥 List and download</h3>
+<p class="text-xs text-neutral-400">Competitors and the extension</p>
+</a>
+</div>
+</section>
+<!-- LINKS ÚTEIS -->
+<section class="mb-12">
+<div class="bg-gradient-to-br from-blue-900/20 to-dark-800 rounded-2xl border border-blue-500/30 p-6">
+<h2 class="text-xl font-bold mb-4 flex items-center"><span class="mr-2">🔗</span> Useful links (free)</h2>
+<div class="grid grid-cols-1 sm:grid-cols-3 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-4 transition-all" href="https://www.facebook.com/ads/library" target="_blank">
+<div class="text-blue-400 font-semibold mb-1 group-hover:underline">📘 Meta Ad Library</div>
+<p class="text-xs text-neutral-400">facebook.com/ads/library — Facebook and Instagram ads</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-4 transition-all" href="https://library.tiktok.com/" target="_blank">
+<div class="text-blue-400 font-semibold mb-1 group-hover:underline">🎵 TikTok Library</div>
+<p class="text-xs text-neutral-400">library.tiktok.com — TikTok ads</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-blue-500/30 p-4 transition-all" href="https://chromewebstore.google.com/detail/ad-library-downloader/gojmmkhaiojimnnjhhilmhjmhdbdagod" target="_blank">
+<div class="text-blue-400 font-semibold mb-1 group-hover:underline">🧩 Ad Library Downloader</div>
+<p class="text-xs text-neutral-400">Free extension to download ads in 1 click</p>
+</a>
+</div>
+<p class="text-xs text-neutral-500 mt-4">The links open in a new tab. The libraries are public and free.</p>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6">Detailed content</h2>
+<!-- MÓDULO 2.1 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-2-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔎 Free ad libraries</h3>
+<p class="text-neutral-400 text-sm">Meta and TikTok show all the ads currently running for free. Learn to open, search, and filter this treasure trove.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">📘</span><div><span class="font-medium">Meta Ad Library</span><span class="text-neutral-500 text-sm ml-2">- Facebook and Instagram</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">At facebook.com/ads/library, you can see all active ads from any brand on Facebook and Instagram.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It’s the world’s largest free source of proven ads. Everything your competitors run is there.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">facebook.com/ads/library · free · public · no login required to browse.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🎵</span><div><span class="font-medium">TikTok Creative Center</span><span class="text-neutral-500 text-sm ml-2">- where the viral videos are</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">On library.tiktok.com, you can find ads running on TikTok, with filters similar to Meta's.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">TikTok is home to the "everyday people talking" format. Many viral videos that later become ads start there.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">library.tiktok.com · focused on vertical video · great for UGC.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔤</span><div><span class="font-medium">Search by keyword</span><span class="text-neutral-500 text-sm ml-2">- e.g., "sneakers," "lose weight"</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">You type in a word related to your product and see ads that talk about it.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It’s the fastest way to find out what your niche is advertising right now.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Think like the customer. Try synonyms. Write down the good ads.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">👤</span><div><span class="font-medium">Search for a competitor</span><span class="text-neutral-500 text-sm ml-2">- check out brands one by one</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">You type in a brand or person's name and see everything they’re advertising in 1 click.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Lets you study exactly the competitors vying for your customer.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Search by name. See what leaders in your niche are doing. It’s all open.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🎚️</span><div><span class="font-medium">The filters</span><span class="text-neutral-500 text-sm ml-2">- media, platform, dates</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Filters that narrow the search: media type (video/image), platform, active ads only, date range.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Good filtering is what separates “seeing everything in a mess” from “seeing only what matters.”</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Video · active ads only · period · platform. Always start with "active ads".</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🌍</span><div><span class="font-medium">Country and language</span><span class="text-neutral-500 text-sm ml-2">- look at the right market</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">You can filter by country. You can study Brazil or see what's already working abroad.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Many winning ideas appear first in other markets. You can bring them to yours first.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Filter by country. Get inspired abroad, then adapt for your market.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-2-1')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors" href="modulo-2-1.html">View Full</a>
+</div>
+</div>
+<!-- MÓDULO 2.2 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-2-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🚩 The 4 signs of a winner</h3>
+<p class="text-neutral-400 text-sm">Four clues that together scream "this ad is selling." Learn to read them and avoid being fooled.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">⏱️</span><div><span class="font-medium">Signal 1: time live</span><span class="text-neutral-500 text-sm ml-2">- the more, the better</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">How long the ad has been running. 30+ days is good; 60+ is rare and great.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It’s the simplest and most reliable sign that an ad is profitable.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Check the start date. Time = health.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">📈</span><div><span class="font-medium">Signal 2: high impressions</span><span class="text-neutral-500 text-sm ml-2">- how much they invested</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">How many times the ad was shown. Very high = a lot of money invested.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">No one puts a lot of money into a bad ad. High impressions = a strong bet.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Sort from highest to lowest. Start at the top.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🧬</span><div><span class="font-medium">Signal 3: many variations</span><span class="text-neutral-500 text-sm ml-2">- the winning formula</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Several nearly identical versions of the same ad running together.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It means the brand has found the formula and is getting the most out of it.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Count the variations. Many = confirmed winner.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🚀</span><div><span class="font-medium">Signal 4: volume spikes</span><span class="text-neutral-500 text-sm ml-2">- mass launch</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Many new ads launched at once across multiple channels.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Often marks the birth of a winning campaign.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">15-20 at once = a bet. Multiple channels = confidence.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🧮</span><div><span class="font-medium">Cross-reference the signals</span><span class="text-neutral-500 text-sm ml-2">- don't rely on just one</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">One signal on its own can be misleading. The strength is in seeing several at once in the same ad.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It keeps you from copying something that only "looks" good. Cross-checking signals gives you more confidence.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Time + impressions + variations together = a true winner.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🦄</span><div><span class="font-medium">Hunt for the unicorn</span><span class="text-neutral-500 text-sm ml-2">- live for 60+ days</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">The "unicorn" is the ad that has survived 60+ days and shows several strong signals.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">It’s the best possible model for you to take apart and copy the structure.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Rare, proven, top study priority.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-2-2')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors" href="modulo-2-2.html">View Full</a>
+</div>
+</div>
+<!-- MÓDULO 2.3 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-2-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-blue-400 font-bold">2.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">📥 List of competitors and download ads</h3>
+<p class="text-neutral-400 text-sm">Build your list of brands to watch and learn to download any ad with a free browser extension.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">📝</span><div><span class="font-medium">List of 20-30 brands</span><span class="text-neutral-500 text-sm ml-2">- your targets</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">A list of 20 to 30 competitors vying for the same customer as you.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">With a list, you keep an eye on the same brands and quickly notice what’s catching on.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Write this down in a notebook or spreadsheet. Revisit it every week.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🎯</span><div><span class="font-medium">Target the same audience</span><span class="text-neutral-500 text-sm ml-2">- the avatar</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Choose brands that speak to the same person you want to reach (age, interests, problem).</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">An ad that works for another audience may not work for yours. Target the same customer.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Same customer = useful examples. Define your avatar.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">↕️</span><div><span class="font-medium">Sort by impressions</span><span class="text-neutral-500 text-sm ml-2">- from biggest to smallest</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Within the library, sort the brand's ads by highest impressions.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">The ones at the top are where the money is—the most likely winners.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Largest → smallest. Focus on the top of the list.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">✅</span><div><span class="font-medium">Cross-reference duration</span><span class="text-neutral-500 text-sm ml-2">- at least 30 days</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">Before copying, confirm that the ad has been running for at least 30 days.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Don't copy something that's been around for only 5 days — there's not enough data yet to know if it sells.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">≥30 days before copying. High impressions + time = green light.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🧩</span><div><span class="font-medium">The download extension</span><span class="text-neutral-500 text-sm ml-2">- Ad Library Downloader</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">A free browser extension that adds a “download” button over the ads in the library.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">Lets you save the ad video to analyze it carefully and use it as a model.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Install it in your browser · refresh the page · the download button appears.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-blue-500/20 text-blue-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">💾</span><div><span class="font-medium">Download in 1 click</span><span class="text-neutral-500 text-sm ml-2">- build your library</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-blue-400 font-semibold">What it is:</span><p class="text-neutral-300 text-sm">With the extension enabled, one click saves the ad video to your computer.</p></div><div><span class="text-blue-400 font-semibold">Why learn:</span><p class="text-neutral-300 text-sm">You build a collection of the best ads to study and recreate in Tracks 3 and 4.</p></div><div><span class="text-blue-400 font-semibold">Key concepts:</span><p class="text-neutral-300 text-sm">Download the winners. Organize them by niche. This collection becomes gold.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-2-3')">View in Modal</button>
+<a class="px-4 py-2 text-sm bg-blue-600 hover:bg-blue-500 text-white rounded-lg transition-colors" href="modulo-2-3.html">View Full</a>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-10">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha1/index.html">← Track 1</a>
+<a class="flex-1 text-center px-6 py-3 bg-blue-600 text-white rounded-lg font-semibold hover:bg-blue-500 transition-colors" href="../trilha3/index.html">Next: Track 3 · Deconstruct →</a>
+</div>
+</main>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-2-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.1</span><span class="font-semibold">Free ad libraries</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-2-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-2-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.2</span><span class="font-semibold">The 4 signs of a winner</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-2-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-2-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-blue-400 font-bold">2.3</span><span class="font-semibold">List of competitors and download ads</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-2-3.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-8">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm">
+<p>Viral Ads with AI · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p>
+</div>
+</footer>
+<script>
+    function toggleTopic(button){ const t=button.closest('.topic-item'); const e=t.querySelector('.topic-explanation'); const c=button.closest('.bg-dark-800'); c.querySelectorAll('.topic-explanation.active').forEach(x=>{ if(x!==e) x.classList.remove('active'); }); e.classList.toggle('active'); }
+    function openModal(id){ const m=document.getElementById(id); if(m){ m.classList.remove('hidden'); document.body.style.overflow='hidden'; } }
+    function closeModal(){ document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden')); document.body.style.overflow='auto'; }
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

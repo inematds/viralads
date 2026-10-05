@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Module 3.3 · Cataloging and Finding Patterns | Viral Ads with AI</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124,58,237,0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124,58,237,0.25); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .bg-emerald-500\/20 { background-color: rgba(5,150,105,0.12); }
+    html:not(.dark) .border-emerald-500\/30 { border-color: rgba(5,150,105,0.25); }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .bg-blue-500\/20 { background-color: rgba(37,99,235,0.12); }
+    html:not(.dark) .border-blue-500\/30 { border-color: rgba(37,99,235,0.25); }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    html:not(.dark) .bg-red-900\/20 { background-color: rgba(220,38,38,0.08); }
+    html:not(.dark) .border-red-500\/30 { border-color: rgba(220,38,38,0.25); }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha3/modulo-3-3.html" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha3/modulo-3-3.html" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha3/modulo-3-3.html" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/modulo-3-3.html" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="modulo-3-3.html" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">EN</a><a href="../../../es/curso/trilha3/modulo-3-3.html" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Viral Ads with AI</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentals</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Hunt</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Deconstruct</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Create</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<nav class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-4"><div class="flex items-center space-x-2 text-sm text-neutral-400"><a class="hover:text-purple-400" href="../../index.html">Beginner</a><span>/</span><a class="hover:text-purple-400" href="index.html">Track 3</a><span>/</span><span class="text-purple-400">Module 3.3</span></div></nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">MODULE 3.3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🗂️ Catalog and find the patterns</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">One ad is an anecdote. Twenty ads reveal a pattern. In this module, you’ll learn to catalog them and extract the “winning template” in your niche—the script you’ll give the AI in the next track.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">6</div><div class="text-xs text-neutral-400">Topics</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">30</div><div class="text-xs text-neutral-400">Minutes</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Interm.</div><div class="text-xs text-neutral-400">Level</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Method</div><div class="text-xs text-neutral-400">Type</div></div>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mb-10 overflow-hidden">
+<svg aria-label="Several cataloged ads reveal what keeps recurring, and that repetition becomes the niche’s winning template" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="m33-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
+<filter height="180%" id="m33-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="m33-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="m33-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#c084fc"></path></marker>
+</defs>
+<rect fill="url(#m33-grid)" height="200" width="1000" x="0" y="0"></rect>
+<g fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" font-weight="600">
+<g><rect fill="#1a1230" height="30" rx="8" stroke="#c084fc" stroke-width="2" width="120" x="40" y="22"></rect><text text-anchor="middle" x="100" y="42">ad 1</text></g>
+<g><rect fill="#1a1230" height="30" rx="8" stroke="#c084fc" stroke-width="2" width="120" x="40" y="60"></rect><text text-anchor="middle" x="100" y="80">ad 2</text></g>
+<g><rect fill="#1a1230" height="30" rx="8" stroke="#c084fc" stroke-width="2" width="120" x="40" y="98"></rect><text text-anchor="middle" x="100" y="118">ad 3</text></g>
+<g><rect fill="#1a1230" height="30" rx="8" stroke="#c084fc" stroke-width="2" width="120" x="40" y="136"></rect><text text-anchor="middle" x="100" y="156">… up to 20</text></g>
+</g>
+<g fill="none" opacity="0.55" stroke="#c084fc" stroke-width="2">
+<path d="M160,37 C300,37 320,90 410,95" marker-end="url(#m33-ah)"></path>
+<path d="M160,75 C300,75 330,93 410,97" marker-end="url(#m33-ah)"></path>
+<path d="M160,113 C300,113 330,101 410,99" marker-end="url(#m33-ah)"></path>
+<path d="M160,151 C300,151 320,108 410,101" marker-end="url(#m33-ah)"></path>
+</g>
+<rect fill="#1a1230" height="62" rx="13" stroke="#c084fc" stroke-width="2" width="200" x="410" y="68"></rect>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="510" y="94">what repeats</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="11.5" text-anchor="middle" x="510" y="113">= niche standard</text>
+<path d="M610,99 L700,99" fill="none" marker-end="url(#m33-ah)" opacity="0.7" stroke="#c084fc" stroke-width="2"></path>
+<g filter="url(#m33-glow)"><rect fill="#1a1230" height="66" rx="15" stroke="url(#m33-grad)" stroke-width="2.5" width="250" x="700" y="66"></rect></g>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="16" font-weight="700" text-anchor="middle" x="825" y="94">📐 Winning Template</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="825" y="115">ready to recreate</text>
+</svg>
+</div>
+<section class="mb-16" id="topico-1">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">1</span><h2 class="text-2xl font-bold">🗂️ Catalog 15-20 ads</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Combine from <strong class="text-purple-400">15 to 20 winning ads</strong> from the same niche and analyze them all using the same 5-dimension worksheet. With enough examples, coincidences stop being luck and become a rule.</p>
+<div class="bg-gradient-to-br from-purple-900/30 to-dark-800 rounded-xl border border-purple-500/30 p-6"><h3 class="text-lg font-semibold text-purple-400 mb-4 flex items-center"><span class="mr-2">🔑</span> How to organize</h3><p class="text-neutral-300">A simple spreadsheet: one row per ad, one column per dimension (hook, pacing, audio, narrative, CTA). Fill it in as you go.</p></div>
+</section>
+<section class="mb-16" id="topico-2">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">2</span><h2 class="text-2xl font-bold">🔢 Count frequency</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Count how many times each type of hook, pacing, or CTA appears in your collection. What appears in <strong class="text-purple-400">15 of 20 ads</strong> is, almost certainly, what works.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6"><h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">💡</span> Tip</h3><p class="text-neutral-300">Don't try to judge by taste. Let the numbers speak: the most frequent hook wins over the hook you "think" looks better.</p></div>
+</section>
+<section class="mb-16" id="topico-3">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">3</span><h2 class="text-2xl font-bold">🧩 Find the commonalities</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Commonalities are the things winning ads have in common—the “style” the whole niche uses. They are <strong class="text-purple-400">the ones you’re going to copy</strong> in your own ad.</p>
+<div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600"><span class="text-purple-400 font-semibold text-sm">Example</span><p class="text-sm text-neutral-300 mt-1">"Almost all of them start with a promise in the first 3s."</p></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600"><span class="text-purple-400 font-semibold text-sm">Example</span><p class="text-sm text-neutral-300 mt-1">"Almost all of them show the price at the end."</p></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600"><span class="text-purple-400 font-semibold text-sm">Example</span><p class="text-sm text-neutral-300 mt-1">"Almost all of them use a conversational voice."</p></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600"><span class="text-purple-400 font-semibold text-sm">Reading</span><p class="text-sm text-neutral-300 mt-1">These points become rules for your template.</p></div>
+</div>
+</section>
+<section class="mb-16" id="topico-4">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">4</span><h2 class="text-2xl font-bold">✂️ Extract the 5 pieces</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">For each ad, separate five pieces. Once separated, they become a menu you can combine to build your ad.</p>
+<div class="space-y-3">
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600 flex items-start space-x-3"><span class="text-purple-400 font-bold">1.</span><div><strong class="text-white">Hook</strong> <span class="text-neutral-400 text-sm">— the opening line that hooks you.</span></div></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600 flex items-start space-x-3"><span class="text-purple-400 font-bold">2.</span><div><strong class="text-white">Primary text</strong> <span class="text-neutral-400 text-sm">— the body of the message.</span></div></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600 flex items-start space-x-3"><span class="text-purple-400 font-bold">3.</span><div><strong class="text-white">Headline (title)</strong> <span class="text-neutral-400 text-sm">— the headline.</span></div></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600 flex items-start space-x-3"><span class="text-purple-400 font-bold">4.</span><div><strong class="text-white">CTA</strong> <span class="text-neutral-400 text-sm">— the call to action.</span></div></div>
+<div class="bg-dark-800 rounded-lg p-4 border border-dark-600 flex items-start space-x-3"><span class="text-purple-400 font-bold">5.</span><div><strong class="text-white">Landing</strong> <span class="text-neutral-400 text-sm">— the page you land on after clicking.</span></div></div>
+</div>
+</section>
+<section class="mb-16" id="topico-5">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">5</span><h2 class="text-2xl font-bold">📐 Build Your Template</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">Combine the commonalities into a <strong class="text-purple-400">sample script for your niche</strong>. This template is exactly what you’ll give the AI in Track 4 to make your video—changing only the product and brand.</p>
+<div class="bg-blue-900/20 rounded-xl border border-blue-500/30 p-6"><h3 class="text-lg font-semibold text-blue-400 mb-4 flex items-center"><span class="mr-2">📊</span> What a template looks like</h3><p class="text-neutral-300 text-sm font-mono">[0-3s] promise hook → [3-8s] problem + solution → [8-12s] proof/demo → [end] price + CTA "order through the link".</p></div>
+</section>
+<section class="mb-16" id="topico-6">
+<div class="flex items-center space-x-4 mb-6"><span class="flex items-center justify-center w-12 h-12 rounded-full bg-purple-500/20 text-purple-400 font-bold text-xl">6</span><h2 class="text-2xl font-bold">🔁 50-100 ads and the pattern emerges</h2></div>
+<p class="text-neutral-300 mb-6 leading-relaxed">The more you analyze and run (50 to 100), the more the niche's pattern becomes <strong class="text-purple-400">clear and trustworthy</strong>. It’s work that builds over time: every ad you analyze makes you sharper.</p>
+<div class="bg-primary/10 rounded-xl border border-primary/30 p-6"><h3 class="text-lg font-semibold text-primary mb-3 flex items-center"><span class="mr-2">✏️</span> Final track exercise</h3><p class="text-neutral-300">Build your first template based on 10-15 ads in your niche. Save it — it’s the raw material for Track 4.</p></div>
+</section>
+<section class="mb-12">
+<div class="bg-gradient-to-br from-purple-900/40 via-dark-800 to-dark-800 rounded-xl border border-purple-500/30 p-8">
+<h2 class="text-2xl font-bold mb-6 flex items-center"><span class="mr-3">✅</span> Module Summary</h2>
+<div class="space-y-4 mb-8">
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Catalog 15-20</strong><span class="text-neutral-400"> — quantity reveals patterns.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Count the frequency</strong><span class="text-neutral-400"> — the most repeated one is the winner.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Extract 5 pieces</strong><span class="text-neutral-400"> — hook, copy, headline, CTA, landing page.</span></div></div>
+<div class="flex items-start space-x-3"><span class="text-purple-400 mt-1">✓</span><div><strong class="text-white">Build the template</strong><span class="text-neutral-400"> — the script that goes to the AI.</span></div></div>
+</div>
+<div class="bg-dark-800/50 rounded-lg p-4 mb-8"><h3 class="font-semibold text-purple-400 mb-2">Next Track:</h3><p class="text-neutral-300">Track 4 — Create: produce your UGC ad with AI</p></div>
+<div class="flex flex-col sm:flex-row gap-4">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="modulo-3-2.html">← Previous module</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="../trilha4/index.html">Go to Track 4 →</a>
+</div>
+</div>
+</section>
+</main>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Viral Ads with AI · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p></div></footer>
+<script>
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

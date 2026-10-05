@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ruta 3 · Desconstruir | Anuncios virales con IA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .bg-purple-500\/20 { background-color: rgba(124,58,237,0.12); }
+    html:not(.dark) .bg-purple-500\/10 { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .border-purple-500\/30 { border-color: rgba(124,58,237,0.25); }
+    html:not(.dark) .hover\:bg-purple-500\/30:hover { background-color: rgba(124,58,237,0.18); }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) .hover\:border-purple-500\/30:hover { border-color: rgba(124,58,237,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha3/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha3/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha3/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha3/" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha3/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Anuncios virales con IA</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Buscar</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-purple-400 bg-purple-500/10" href="index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Descomponer</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-amber-400 hover:bg-amber-500/10 transition-colors" href="../trilha4/index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Crear</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-purple-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-purple-500/20 text-purple-400 text-xs font-semibold rounded-full mb-4">RUTA 3</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🔬 Desconstruir</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">¿Encontraste los anuncios ganadores? Ahora viene la parte que nadie hace: <strong class="text-purple-400">entender por qué funcionan</strong>. Aprenderás las 5 dimensiones de análisis, la revisión cuadro por cuadro y a catalogar hasta que los patrones ganadores aparezcan por sí solos.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">3</div><div class="text-xs text-neutral-400">Módulos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">18</div><div class="text-xs text-neutral-400">Temas</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">~1h30</div><div class="text-xs text-neutral-400">Duración</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-purple-400">Intermedio</div><div class="text-xs text-neutral-400">Nivel</div></div>
+</div>
+<div class="rounded-2xl border border-purple-500/30 bg-dark-900/40 p-3 sm:p-4 mt-8 overflow-hidden">
+<svg aria-label="Un anuncio ganador se desglosa en cinco dimensiones: gancho, ritmo, audio, narrativa y llamada a la acción" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="t3h-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#c084fc"></stop><stop offset="1" stop-color="#a855f7"></stop></lineargradient>
+<filter height="180%" id="t3h-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="t3h-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#a855f7" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="t3h-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#c084fc"></path></marker>
+</defs>
+<rect fill="url(#t3h-grid)" height="200" width="1000" x="0" y="0"></rect>
+<g filter="url(#t3h-glow)"><rect fill="#1a1230" height="60" rx="14" stroke="url(#t3h-grad)" stroke-width="2.5" width="170" x="40" y="70"></rect></g>
+<text fill="#c084fc" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="125" y="98">anuncio</text>
+<text fill="#e9d5ff" font-family="Inter,sans-serif" font-size="12" text-anchor="middle" x="125" y="117">ganador</text>
+<g fill="none" opacity="0.6" stroke="#c084fc" stroke-width="2">
+<path d="M210,100 C320,100 360,30 470,30" marker-end="url(#t3h-ah)"></path>
+<path d="M210,100 C320,100 360,65 470,65" marker-end="url(#t3h-ah)"></path>
+<path d="M210,100 L470,100" marker-end="url(#t3h-ah)"></path>
+<path d="M210,100 C320,100 360,135 470,135" marker-end="url(#t3h-ah)"></path>
+<path d="M210,100 C320,100 360,170 470,170" marker-end="url(#t3h-ah)"></path>
+</g>
+<g font-family="Inter,sans-serif" font-size="14" font-weight="600">
+<g><rect fill="#1a1230" height="34" rx="9" stroke="#c084fc" stroke-width="2" width="200" x="470" y="13"></rect><text fill="#e9d5ff" text-anchor="middle" x="570" y="35">🪝 gancho</text></g>
+<g><rect fill="#1a1230" height="34" rx="9" stroke="#c084fc" stroke-width="2" width="200" x="470" y="48"></rect><text fill="#e9d5ff" text-anchor="middle" x="570" y="70">⏩ ritmo</text></g>
+<g><rect fill="#1a1230" height="34" rx="9" stroke="#c084fc" stroke-width="2" width="200" x="470" y="83"></rect><text fill="#e9d5ff" text-anchor="middle" x="570" y="105">🔊 audio</text></g>
+<g><rect fill="#1a1230" height="34" rx="9" stroke="#c084fc" stroke-width="2" width="200" x="470" y="118"></rect><text fill="#e9d5ff" text-anchor="middle" x="570" y="140">📖 narrativa</text></g>
+<g><rect fill="#1a1230" height="34" rx="9" stroke="#c084fc" stroke-width="2" width="200" x="470" y="153"></rect><text fill="#e9d5ff" text-anchor="middle" x="570" y="175">📣 llamada (CTA)</text></g>
+</g>
+</svg>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Mapa de la ruta</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-1">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🔬 Las 5 dimensiones</h3>
+<p class="text-xs text-neutral-400">Gancho, ritmo, audio, narrativa, CTA</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-2">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🎞️ Cuadro por cuadro</h3>
+<p class="text-xs text-neutral-400">Y la IA que lo desarma todo</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-purple-500/30 p-5 transition-all" href="#modulo-3-3">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold text-sm">3.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-purple-400 transition-colors">🗂️ Catalogar patrones</h3>
+<p class="text-xs text-neutral-400">15-20 anuncios, aparece el molde</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6">Contenido detallado</h2>
+<!-- MÓDULO 3.1 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🔬 Las 5 dimensiones de análisis</h3>
+<p class="text-neutral-400 text-sm">Todo anuncio que vende se puede leer en cinco partes. Aprende a observar cada una y nunca volverás a ver un anuncio de la misma manera.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🪝</span><div><span class="font-medium">El gancho (hook)</span><span class="text-neutral-500 text-sm ml-2">- los primeros 3 segundos</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La primera frase/imagen que capta la atención. Es lo que hace que la persona deje de desplazarse por el feed.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Sin gancho, nadie ve el resto. Es la parte más importante de todo el anuncio.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">"Descubrí un truco..." · una pregunta · un resultado sorprendente.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">⏩</span><div><span class="font-medium">El ritmo (pacing)</span><span class="text-neutral-500 text-sm ml-2">- ¿rápido o tranquilo?</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La velocidad con que se suceden las escenas y los diálogos a lo largo del video.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">El ritmo adecuado mantiene a la persona hasta el final. Los cortes rápidos captan la atención; demasiada lentitud hace que la pierdas.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Cortes frecuentes · sin tiempo muerto · acelera al principio.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔊</span><div><span class="font-medium">El audio</span><span class="text-neutral-500 text-sm ml-2">- voz y música</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La voz de quien habla y la música de fondo. En el UGC, la voz es lo que más transmite (o destruye) la confianza.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">La gente perdona una imagen mala, pero no una voz mala. Es un pilar del anuncio.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Voz natural · sonido de música actual · cadencia de conversación.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">📖</span><div><span class="font-medium">La narrativa</span><span class="text-neutral-500 text-sm ml-2">- el orden de la historia</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La estructura: cómo el video presenta el problema, muestra la solución y llega a la oferta.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">El orden correcto lleva a la persona de forma natural a querer comprar.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Problema → solución → prueba → oferta. Siempre con esa lógica.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">📣</span><div><span class="font-medium">El CTA</span><span class="text-neutral-500 text-sm ml-2">- el llamado y dónde aparece</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">CTA es la «llamada a la acción»: «compra ahora», «pídelo ya», «haz clic en el enlace». Y también importa dónde aparece.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Sin una llamada a la acción clara, a la persona le gusta el video, pero no actúa. El CTA cierra la venta.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Directo · una sola acción · repetida al final.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🗒️</span><div><span class="font-medium">Anotar en las 5 dimensiones</span><span class="text-neutral-500 text-sm ml-2">- la ficha de análisis</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Una ficha donde anotas las 5 dimensiones de cada anuncio: gancho, ritmo, audio, narrativa y CTA.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Anotar transforma las «suposiciones» en patrones. Después de varias fichas, lo que se repite se convierte en tu fórmula.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La misma ficha para todos. Compara. Busca lo que se repite.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-1')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-1.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 3.2 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🎞️ Análisis cuadro por cuadro y transcripción</h3>
+<p class="text-neutral-400 text-sm">Cómo analizar un anuncio en cámara lenta —el texto en pantalla, los planos, lo visual— y cómo dejar que la IA haga ese trabajo pesado por ti.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🎬</span><div><span class="font-medium">Qué es cuadro por cuadro</span><span class="text-neutral-500 text-sm ml-2">- ver en cámara lenta</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Mirar el anuncio escena por escena, casi pausando el video, para ver cada decisión que se tomó.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">A velocidad normal solo lo "sientes". Cuadro por cuadro, entiendes exactamente lo que hicieron.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Pausa · vuelve atrás · fíjate en los detalles que suelen pasar desapercibidos.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">📝</span><div><span class="font-medium">Texto en pantalla</span><span class="text-neutral-500 text-sm ml-2">- subtítulos y palabras</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las palabras que aparecen escritas en el video: subtítulos, destacados, precio.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Mucha gente mira sin sonido. El texto en pantalla es lo que comunica el mensaje a esas personas.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Siempre con subtítulos · destaca la palabra clave · muestra el precio.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🎥</span><div><span class="font-medium">Los planos (escenas)</span><span class="text-neutral-500 text-sm ml-2">- cómo muestran el producto</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cada «plano» es un fragmento de una escena: el rostro hablando, el producto en primer plano, las manos usándolo.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">La secuencia correcta de planos muestra el producto de una forma que dan ganas de comprarlo.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Rostro · primer plano del producto · resultado. Varía los planos.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🎨</span><div><span class="font-medium">El perfil visual</span><span class="text-neutral-500 text-sm ml-2">- colores y ambiente</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La «apariencia» general del video: colores, iluminación, ambiente (casa, calle, cocina).</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">El estilo visual adecuado refuerza la idea de que «esto es real, es gente común» del UGC.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Ambiente hogareño · luz natural · nada de estudio perfecto.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🗣️</span><div><span class="font-medium">Transcribir el audio</span><span class="text-neutral-500 text-sm ml-2">- lo que se dice, por escrito</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Pasar a texto todo lo que dice la persona en el video: el guion, palabra por palabra.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Con el guion delante, ves la estructura del discurso y puedes adaptarlo a tu producto.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La IA transcribe por sí sola. Obtienes el guion listo para estudiar.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🤖</span><div><span class="font-medium">Deja que la IA lo descomponga</span><span class="text-neutral-500 text-sm ml-2">- el trabajo pesado</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Le das el video a la IA y lo desglosa todo: escena por escena, texto en pantalla, transcripción y por qué funciona.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Lo que llevaría una hora hacerlo a mano, la IA lo hace en minutos y con más detalle.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Entra el video · sale el análisis completo. Tú decides qué usar.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-2')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-2.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 3.3 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-3-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-purple-400 font-bold">3.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🗂️ Catalogar y encontrar los patrones</h3>
+<p class="text-neutral-400 text-sm">Un anuncio es una anécdota. Veinte anuncios se convierten en un patrón. Aprende a catalogar y extraer el molde ganador de tu nicho.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🗂️</span><div><span class="font-medium">Catalogar 15-20 anuncios</span><span class="text-neutral-500 text-sm ml-2">- la base de estudio</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Reúne de 15 a 20 anuncios exitosos del mismo nicho y analízalos todos con la misma ficha.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Con una cantidad suficiente, las coincidencias dejan de ser suerte y se convierten en la regla del nicho.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">15-20 anuncios · mismo nicho · misma ficha.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🔢</span><div><span class="font-medium">Contar la frecuencia</span><span class="text-neutral-500 text-sm ml-2">- lo que más se repite</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Contar cuántas veces aparece cada tipo de gancho, ritmo o CTA en tu colección.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Lo que aparece en 15 de 20 anuncios casi con certeza es lo que funciona.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Cuenta. El más frecuente es el que tiene más probabilidades de ser el ganador.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🧩</span><div><span class="font-medium">Encontrar las coincidencias</span><span class="text-neutral-500 text-sm ml-2">- lo que todos hacen igual</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las cosas en común entre los anuncios ganadores: el "estilo" que usa todo el nicho.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Esas son las características comunes que vas a copiar en tu propio anuncio.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Lo que tienen en común los ganadores = el camino seguro.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">✂️</span><div><span class="font-medium">Extraer las 5 piezas</span><span class="text-neutral-500 text-sm ml-2">- hook, texto, headline, CTA, landing</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">De cada anuncio, separa 5 piezas: el gancho, el texto principal, el título, el llamado a la acción y la página de destino.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Por separado, estas piezas se convierten en un menú que puedes combinar para armar tu anuncio.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Hook · texto · headline · CTA · landing. Las 5 piezas del rompecabezas.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">📐</span><div><span class="font-medium">Armar tu plantilla</span><span class="text-neutral-500 text-sm ml-2">- el esqueleto ganador</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Un guion modelo de tu nicho, creado a partir de las coincidencias que encontraste.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Este molde es lo que le entregarás a la IA en la Trilha 4 para que haga tu video.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Un molde reutilizable. Solo cambias el producto y la marca.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-purple-500/20 text-purple-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🔁</span><div><span class="font-medium">50-100 anuncios</span><span class="text-neutral-500 text-sm ml-2">- y el patrón se consolida</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-purple-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Cuanto más analizas y ejecutas (50 a 100), más claro y confiable queda el patrón del nicho.</p></div><div><span class="text-purple-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es un trabajo que se acumula: cada anuncio que analizas te vuelve más hábil.</p></div><div><span class="text-purple-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">El volumen da claridad. El patrón recompensa la paciencia.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-3-3')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-purple-600 hover:bg-purple-500 text-white rounded-lg transition-colors" href="modulo-3-3.html">Ver completo</a>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-10">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha2/index.html">← Trilha 2</a>
+<a class="flex-1 text-center px-6 py-3 bg-purple-600 text-white rounded-lg font-semibold hover:bg-purple-500 transition-colors" href="../trilha4/index.html">Siguiente: Ruta 4 · Crear →</a>
+</div>
+</main>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.1</span><span class="font-semibold">Las 5 dimensiones de análisis</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.2</span><span class="font-semibold">Análisis cuadro por cuadro</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-3-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-purple-400 font-bold">3.3</span><span class="font-semibold">Catalogar y encontrar los patrones</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-3-3.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Anuncios Virales con IA · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p></div></footer>
+<script>
+    function toggleTopic(button){ const t=button.closest('.topic-item'); const e=t.querySelector('.topic-explanation'); const c=button.closest('.bg-dark-800'); c.querySelectorAll('.topic-explanation.active').forEach(x=>{ if(x!==e) x.classList.remove('active'); }); e.classList.toggle('active'); }
+    function openModal(id){ const m=document.getElementById(id); if(m){ m.classList.remove('hidden'); document.body.style.overflow='hidden'; } }
+    function closeModal(){ document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden')); document.body.style.overflow='auto'; }
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>

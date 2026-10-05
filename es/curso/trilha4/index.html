@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="es">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Ruta 4 · Crear | Anuncios virales con IA</title>
+<script src="https://cdn.tailwindcss.com"></script>
+<script>
+    tailwind.config = { darkMode: 'class', theme: { extend: { colors: {
+      primary: '#FACC15', dark: { 900: '#111827', 800: '#1f2937', 700: '#374151', 600: '#4b5563' } } } } }
+  </script>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&amp;display=swap" rel="stylesheet"/>
+<style>
+    body { font-family: 'Inter', sans-serif; }
+    .dark body { background-color: #111827; }
+    .topic-explanation { display: none; }
+    .topic-explanation.active { display: block; }
+    html:not(.dark) body { background-color: #f8fafc; }
+    html:not(.dark) .bg-dark-900 { background-color: #ffffff; }
+    html:not(.dark) .bg-dark-800 { background-color: #f9fafb; }
+    html:not(.dark) .bg-dark-700 { background-color: #f3f4f6; }
+    html:not(.dark) .bg-dark-600 { background-color: #e5e7eb; }
+    html:not(.dark) .text-neutral-100 { color: #111827; }
+    html:not(.dark) .text-neutral-300 { color: #4b5563; }
+    html:not(.dark) .text-neutral-400 { color: #6b7280; }
+    html:not(.dark) .text-neutral-500 { color: #9ca3af; }
+    html:not(.dark) .border-dark-600 { border-color: #d1d5db; }
+    html:not(.dark) .border-dark-700 { border-color: #e5e7eb; }
+    html:not(.dark) .text-amber-400 { color: #92400e; }
+    html:not(.dark) .bg-amber-500\/20 { background-color: rgba(217,119,6,0.12); }
+    html:not(.dark) .bg-amber-500\/10 { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .border-amber-500\/30 { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .hover\:bg-amber-500\/30:hover { background-color: rgba(217,119,6,0.18); }
+    html:not(.dark) .hover\:text-amber-400:hover { color: #92400e; }
+    html:not(.dark) .hover\:bg-amber-500\/10:hover { background-color: rgba(217,119,6,0.08); }
+    html:not(.dark) .hover\:border-amber-500\/30:hover { border-color: rgba(217,119,6,0.25); }
+    html:not(.dark) .group:hover .group-hover\:text-amber-400 { color: #92400e; }
+    html:not(.dark) .text-emerald-400 { color: #059669; }
+    html:not(.dark) .hover\:text-emerald-400:hover { color: #059669; }
+    html:not(.dark) .hover\:bg-emerald-500\/10:hover { background-color: rgba(5,150,105,0.08); }
+    html:not(.dark) .text-blue-400 { color: #2563eb; }
+    html:not(.dark) .hover\:text-blue-400:hover { color: #2563eb; }
+    html:not(.dark) .hover\:bg-blue-500\/10:hover { background-color: rgba(37,99,235,0.08); }
+    html:not(.dark) .text-purple-400 { color: #7c3aed; }
+    html:not(.dark) .hover\:text-purple-400:hover { color: #7c3aed; }
+    html:not(.dark) .hover\:bg-purple-500\/10:hover { background-color: rgba(124,58,237,0.08); }
+    html:not(.dark) [class*="bg-gradient-to"] { background-image: none !important; }
+    html:not(.dark) .text-primary { color: #a16207; }
+    html:not(.dark) .bg-primary\/10 { background-color: rgba(161,98,7,0.08); }
+    html:not(.dark) .border-primary\/30 { border-color: rgba(161,98,7,0.25); }
+    html:not(.dark) .text-sky-400 { color: #0369a1; }
+    html:not(.dark) .text-yellow-400 { color: #a16207; }
+    html:not(.dark) .hover\:text-sky-300:hover { color: #0284c7; }
+    html:not(.dark) .hover\:text-yellow-300:hover { color: #854d0e; }
+    html:not(.dark) .bg-dark-900\/95 { background-color: rgba(255,255,255,0.95); }
+    html:not(.dark) .text-red-400 { color: #dc2626; }
+    .dark .border-dark-600 { border-color: #374151; }
+    .dark .divide-dark-600 > :not([hidden]) ~ :not([hidden]) { border-color: #374151; }
+    html:not(.dark) svg[role="img"] { filter: saturate(0.82) brightness(0.96); }
+  </style>
+<link href="https://inematds.github.io/viralads/curso/trilha4/" hreflang="pt-BR" rel="alternate"/><link href="https://inematds.github.io/viralads/en/curso/trilha4/" hreflang="en" rel="alternate"/><link href="https://inematds.github.io/viralads/es/curso/trilha4/" hreflang="es" rel="alternate"/></head>
+<body class="bg-dark-900 text-neutral-100 min-h-screen"><div class="inema-lang" style="position:fixed;right:14px;bottom:14px;z-index:9999;display:flex;gap:2px;padding:4px;border-radius:10px;background:rgba(12,12,16,.82);border:1px solid rgba(226,162,59,.45);font:600 12px/1 Sora,Inter,system-ui,sans-serif;backdrop-filter:blur(8px)" translate="no"><a href="../../../curso/trilha4/" hreflang="pt-BR" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">PT</a><a href="../../../en/curso/trilha4/" hreflang="en" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#e9e9ee">EN</a><a href="./" hreflang="es" style="padding:6px 8px;border-radius:7px;text-decoration:none;color:#1a1206;background:#E2A23B">ES</a></div>
+<nav class="sticky top-0 z-50 bg-dark-900/95 backdrop-blur-sm border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-14">
+<div class="flex items-center space-x-4">
+<a class="flex items-center space-x-2 text-yellow-400 hover:text-yellow-300" href="../../index.html"><span class="text-2xl">🎯</span><span class="font-bold text-lg hidden sm:inline">Anuncios virales con IA</span></a>
+<span class="text-neutral-600">|</span>
+<a class="text-sky-400 hover:text-sky-300 text-sm font-medium" href="https://inema.club" target="_blank">INEMA.CLUB</a>
+</div>
+<div class="flex items-center space-x-1 sm:space-x-2">
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-emerald-400 hover:bg-emerald-500/10 transition-colors" href="../trilha1/index.html"><span class="sm:hidden">T1</span><span class="hidden sm:inline">Fundamentos</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-blue-400 hover:bg-blue-500/10 transition-colors" href="../trilha2/index.html"><span class="sm:hidden">T2</span><span class="hidden sm:inline">Buscar</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-neutral-400 hover:text-purple-400 hover:bg-purple-500/10 transition-colors" href="../trilha3/index.html"><span class="sm:hidden">T3</span><span class="hidden sm:inline">Descomponer</span></a>
+<a class="px-3 py-1.5 rounded-lg text-sm font-semibold text-amber-400 bg-amber-500/10" href="index.html"><span class="sm:hidden">T4</span><span class="hidden sm:inline">Crear</span></a>
+<button class="p-2 rounded-lg bg-dark-700 hover:bg-dark-600 transition-colors ml-2" id="theme-toggle">
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-dark-icon" viewbox="0 0 20 20"><path d="M17.293 13.293A8 8 0 016.707 2.707a8.001 8.001 0 1010.586 10.586z"></path></svg>
+<svg class="hidden w-5 h-5 text-neutral-300" fill="currentColor" id="theme-toggle-light-icon" viewbox="0 0 20 20"><path clip-rule="evenodd" d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4 8a4 4 0 11-8 0 4 4 0 018 0zm-.464 4.95l.707.707a1 1 0 001.414-1.414l-.707-.707a1 1 0 00-1.414 1.414zm2.12-10.607a1 1 0 010 1.414l-.706.707a1 1 0 11-1.414-1.414l.707-.707a1 1 0 011.414 0zM17 11a1 1 0 100-2h-1a1 1 0 100 2h1zm-7 4a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zM5.05 6.464A1 1 0 106.465 5.05l-.708-.707a1 1 0 00-1.414 1.414l.707.707zm1.414 8.486l-.707.707a1 1 0 01-1.414-1.414l.707-.707a1 1 0 011.414 1.414zM4 11a1 1 0 100-2H3a1 1 0 000 2h1z" fill-rule="evenodd"></path></svg>
+</button>
+</div>
+</div>
+</div>
+</nav>
+<header class="bg-gradient-to-br from-amber-900/30 via-dark-800 to-dark-800 py-12 border-b border-dark-600">
+<div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+<span class="inline-block px-3 py-1 bg-amber-500/20 text-amber-400 text-xs font-semibold rounded-full mb-4">RUTA 4</span>
+<h1 class="text-3xl sm:text-4xl font-bold mb-4">🎬 Crear</h1>
+<p class="text-lg text-neutral-400 max-w-3xl">Es hora de producir. Con el molde de tu nicho en la mano, la IA arma tu anuncio UGC: elige al actor, le da voz y genera el video. Aquí entiendes el flujo, por qué la <strong class="text-amber-400">la voz lo es todo</strong>, y cómo hacer pruebas de forma segura.</p>
+<div class="grid grid-cols-4 gap-4 mt-8 max-w-2xl">
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">3</div><div class="text-xs text-neutral-400">Módulos</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">18</div><div class="text-xs text-neutral-400">Temas</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">~1h30</div><div class="text-xs text-neutral-400">Duración</div></div>
+<div class="bg-dark-800/50 rounded-lg p-3 border border-dark-600"><div class="text-xl font-bold text-amber-400">Práctico</div><div class="text-xs text-neutral-400">Nivel</div></div>
+</div>
+<div class="rounded-2xl border border-amber-500/30 bg-dark-900/40 p-3 sm:p-4 mt-8 overflow-hidden">
+<svg aria-label="La IA orquestadora coordina el generador de video y la plataforma para entregar un anuncio UGC listo a partir del molde" class="w-full h-auto" role="img" viewbox="0 0 1000 200">
+<defs>
+<lineargradient id="t4h-grad" x1="0" x2="1" y1="0" y2="1"><stop offset="0" stop-color="#fbbf24"></stop><stop offset="1" stop-color="#f59e0b"></stop></lineargradient>
+<filter height="180%" id="t4h-glow" width="180%" x="-40%" y="-40%"><fegaussianblur result="b" stddeviation="1.8"></fegaussianblur><femerge><femergenode in="b"></femergenode><femergenode in="SourceGraphic"></femergenode></femerge></filter>
+<pattern height="32" id="t4h-grid" patternunits="userSpaceOnUse" width="32"><circle cx="1.3" cy="1.3" fill="#f59e0b" opacity="0.12" r="1.3"></circle></pattern>
+<marker id="t4h-ah" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#fbbf24"></path></marker>
+<marker id="t4h-ahc" markerheight="9" markerwidth="9" orient="auto" refx="6.5" refy="4.5"><path d="M0,0 L8,4.5 L0,9 L2.4,4.5 Z" fill="#38bdf8"></path></marker>
+</defs>
+<rect fill="url(#t4h-grid)" height="200" width="1000" x="0" y="0"></rect>
+<rect fill="#1f1604" height="56" rx="13" stroke="#fbbf24" stroke-width="2" width="150" x="40" y="78"></rect><text fill="#fbbf24" font-family="Inter,sans-serif" font-size="14" font-weight="600" text-anchor="middle" x="115" y="103">📐 molde</text><text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="115" y="121">de tu nicho</text>
+<path d="M190,106 L270,106" fill="none" marker-end="url(#t4h-ah)" opacity="0.7" stroke="#fbbf24" stroke-width="2"></path>
+<g filter="url(#t4h-glow)"><rect fill="#1f1604" height="60" rx="14" stroke="url(#t4h-grad)" stroke-width="2.5" width="180" x="270" y="76"></rect></g>
+<text fill="#fbbf24" font-family="Inter,sans-serif" font-size="15" font-weight="700" text-anchor="middle" x="360" y="102">🧠 IA</text><text fill="#fcd9a0" font-family="Inter,sans-serif" font-size="11" text-anchor="middle" x="360" y="121">orquesta</text>
+<g fill="none" opacity="0.55" stroke="#38bdf8" stroke-width="2">
+<path d="M450,95 C540,95 560,60 650,60" marker-end="url(#t4h-ahc)"></path>
+<path d="M450,117 C540,117 560,150 650,150" marker-end="url(#t4h-ahc)"></path>
+</g>
+<g font-family="Inter,sans-serif" font-size="13" font-weight="600">
+<g><rect fill="#0e1b26" height="36" rx="9" stroke="#38bdf8" stroke-width="2" width="200" x="650" y="42"></rect><text fill="#bfe6ff" text-anchor="middle" x="750" y="65">🎥 genera el video</text></g>
+<g><rect fill="#0e1b26" height="36" rx="9" stroke="#38bdf8" stroke-width="2" width="200" x="650" y="132"></rect><text fill="#bfe6ff" text-anchor="middle" x="750" y="155">🎙️ pone la voz</text></g>
+</g>
+<path d="M850,60 C910,60 910,105 880,105" fill="none" opacity="0.6" stroke="#fbbf24" stroke-width="2"></path>
+<path d="M850,150 C910,150 910,105 880,105" fill="none" opacity="0.6" stroke="#fbbf24" stroke-width="2"></path>
+<g filter="url(#t4h-glow)"><rect height="0" width="0" x="700" y="86"></rect></g>
+</svg>
+</div>
+</div>
+</header>
+<main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+<section class="mb-12">
+<h2 class="text-2xl font-bold mb-6">Mapa de la ruta</h2>
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-1">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🤖 El flujo con IA</h3>
+<p class="text-xs text-neutral-400">Entra la plantilla, sale el video</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-2">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🎙️ Actor y voz</h3>
+<p class="text-xs text-neutral-400">La voz lo es todo</p>
+</a>
+<a class="group bg-dark-800 rounded-xl border border-dark-600 hover:border-amber-500/30 p-5 transition-all" href="#modulo-4-3">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold text-sm">4.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="font-semibold mb-1 group-hover:text-amber-400 transition-colors">🛡️ Variaciones y seguridad</h3>
+<p class="text-xs text-neutral-400">Probar y proteger contraseñas</p>
+</a>
+</div>
+</section>
+<h2 class="text-2xl font-bold mb-6">Contenido detallado</h2>
+<!-- MÓDULO 4.1 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-1">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.1</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🤖 El flujo con IA</h3>
+<p class="text-neutral-400 text-sm">Tres herramientas trabajando juntas: una que piensa y coordina, una que genera el video y una plataforma que lo reúne todo. Tú entregas el molde y recibes el anuncio.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">🧠</span><div><span class="font-medium">El orquestador</span><span class="text-neutral-500 text-sm ml-2">- la IA que coordina</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Una IA «maestra» (como Claude Code) que recibe tu pedido, analiza el video modelo y da las instrucciones a las otras herramientas.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es quien transforma «quiero un anuncio así» en pasos concretos, sin que tengas que hacerlo todo a mano.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Coordina · analiza · da las órdenes. El cerebro del flujo.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🎥</span><div><span class="font-medium">El generador de video</span><span class="text-neutral-500 text-sm ml-2">- crea la imagen en movimiento</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La herramienta (como Seedance 2.0) que realmente crea el video al estilo UGC a partir de una imagen y de instrucciones.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es lo que hace el «milagro» de transformar una foto del producto en un video de una persona hablando.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Imagen + instrucción → video. El brazo de producción.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🏭</span><div><span class="font-medium">La plataforma-fábrica</span><span class="text-neutral-500 text-sm ml-2">- reúne todo en un solo lugar</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Una plataforma (como Arcads) con una biblioteca de actores, voces y todo listo, donde armas el anuncio sin código.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es la forma más fácil para quien no programa: arrastras, eliges y generas.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Actores + voces listos · sin código · interfaz sencilla.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔄</span><div><span class="font-medium">El flujo de principio a fin</span><span class="text-neutral-500 text-sm ml-2">- modelo → tu video</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La secuencia completa: tú das un video de referencia, la IA lo analiza, escribe un guion con el mismo estilo para tu producto y genera el video.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es el corazón de Trilha 4. Entender el flujo te permite tener el control de cada etapa.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Modelo → análisis → guion → video. Cuatro pasos.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🖼️</span><div><span class="font-medium">Cambiar el producto y al actor</span><span class="text-neutral-500 text-sm ml-2">- el poder multimodal</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Puedes tomar un video que funciona y pedir: "cambia el producto por este" y "cambia al actor por este otro".</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es la forma más rápida de adaptar un ganador a tu producto, manteniendo la fórmula ganadora.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La misma estructura, tu producto, tu actor. Adaptación inteligente.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🧾</span><div><span class="font-medium">Del molde al guion</span><span class="text-neutral-500 text-sm ml-2">- dónde entra la IA</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Le das el molde de la Trilha 3 + una foto de tu producto, y la IA escribe el guion de tu anuncio con ese estilo.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es el puente entre el estudio (Trilha 3) y el video listo (este módulo).</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Plantilla + foto del producto → guion listo.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-1')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-1.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 4.2 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-2">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.2</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🎙️ Actor y voz: la voz lo es todo</h3>
+<p class="text-neutral-400 text-sm">La regla de oro del UGC: las personas perdonan una imagen mala, pero nunca perdonan una voz mala. Aprende a elegir al actor adecuado y a diseñar una voz que suene humana.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">👥</span><div><span class="font-medium">Elegir al actor</span><span class="text-neutral-500 text-sm ml-2">- biblioteca de avatares</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las plataformas tienen bibliotecas de "actores" de IA. Buscas por género, edad y tipo, y eliges quién va a hablar.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">El actor adecuado genera identificación inmediata en quien lo ve.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Buscar por género/edad · joven, adulto, sénior · elegir y listo.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🎯</span><div><span class="font-medium">El avatar de tu público</span><span class="text-neutral-500 text-sm ml-2">- parecido al cliente</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Elegir un actor que se parezca a tu cliente ideal: mismo rango de edad, mismo "mundo".</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Confiamos más en quienes se parecen a nosotros. Distintos actores hablan con distintos públicos.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Espejo del cliente · el público sénior habla con personas sénior.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">🔊</span><div><span class="font-medium">La voz lo es todo</span><span class="text-neutral-500 text-sm ml-2">- el pilar del UGC</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">La conclusión más importante de la ruta: la voz transmite confianza. La gente perdona la imagen, pero no perdona una voz mala.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Si solo puedes esmerarte en una cosa, esmérate en la voz.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">La voz genera confianza. Dedícale tiempo.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🎙️</span><div><span class="font-medium">Grabar tu propia voz</span><span class="text-neutral-500 text-sm ml-2">- voz para voz</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">En vez de que la IA "lea" un texto, tú grabas tu voz hablando y la herramienta copia tu cadencia y la reproduce con la voz del avatar.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">La voz copiada de personas reales suena mucho más natural que una voz "leyendo".</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Graba tu voz · la IA copia la cadencia · resultado humano.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">🎚️</span><div><span class="font-medium">Estabilidad y similitud</span><span class="text-neutral-500 text-sm ml-2">- ajustar la voz</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Dos controles: estabilidad (más firme vs. más expresiva) y similitud (cuánto se parece la voz a tu grabación).</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Mover estos botones es lo que afina la voz hasta que suene realmente natural.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Estabilidad = consistencia. Similitud = parecido. Prueba ambas.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">✅</span><div><span class="font-medium">Validar antes de generar</span><span class="text-neutral-500 text-sm ml-2">- escuchar y aprobar</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Antes de generar el video completo, escucha la vista previa de la voz y ajusta la velocidad y los controles.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Corregir la voz en la vista previa ahorra tiempo y evita generar un video con una voz deficiente.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Escucha · ajusta · solo entonces genera el video.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-2')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-2.html">Ver completo</a>
+</div>
+</div>
+<!-- MÓDULO 4.3 -->
+<div class="bg-dark-800 rounded-xl border border-dark-600 mb-6" id="modulo-4-3">
+<div class="p-6 border-b border-dark-600">
+<div class="flex items-center justify-between mb-2"><span class="text-amber-400 font-bold">4.3</span><span class="text-xs text-neutral-500">~30 min</span></div>
+<h3 class="text-2xl font-bold mb-2">🛡️ Realismo, variaciones y seguridad</h3>
+<p class="text-neutral-400 text-sm">Los detalles que distinguen el anuncio que vende del que parece falso, y cómo probar varias versiones y proteger tus contraseñas durante el proceso.</p>
+</div>
+<div class="divide-y divide-dark-600">
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">1</span><span class="text-lg">📵</span><div><span class="font-medium">Sin 4K</span><span class="text-neutral-500 text-sm ml-2">- realismo &gt; perfección</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Para UGC, no uses la resolución más alta posible. La gente común no graba en un 4K perfecto: eso delata que es un anuncio.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Un poco de imperfección aumenta la confianza. El realismo vende más que la perfección.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Evita 4K · que parezca casero · imperfección = autenticidad.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">2</span><span class="text-lg">🔁</span><div><span class="font-medium">Generar variaciones</span><span class="text-neutral-500 text-sm ml-2">- probar para encontrar al ganador</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Generar varias versiones del mismo anuncio (con distintos ganchos, actores y voces) y publicarlas todas para ver cuál vende más.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Es el mismo secreto de Trilha 1: el ganador aparece cuando pruebas varias variantes.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Muchas versiones · deja que el público elija · escala la ganadora.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">3</span><span class="text-lg">📐</span><div><span class="font-medium">Formato y duración</span><span class="text-neutral-500 text-sm ml-2">- vertical y corto</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Configura el video en el formato adecuado: vertical (9:16) para feed/stories y corto (alrededor de 10-15 segundos).</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Un formato incorrecto acaba con el alcance. El feed premia los videos verticales y cortos.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">9:16 · corto y directo · pensado para celular.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">4</span><span class="text-lg">🔐</span><div><span class="font-medium">Proteger tus contraseñas (claves)</span><span class="text-neutral-500 text-sm ml-2">- nunca lo pegues en el chat</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las herramientas usan "claves de API" (una contraseña de acceso). Nunca pegues esa contraseña directamente en una conversación con una IA.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Pídele a la IA un comando para guardar la contraseña de forma segura, fuera del historial de conversación.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Clave = contraseña · nunca en el chat · usa un comando seguro.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">5</span><span class="text-lg">💰</span><div><span class="font-medium">Los costos</span><span class="text-neutral-500 text-sm ml-2">- planes y créditos</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Las plataformas cobran por crédito o por plan mensual. Puedes empezar con poco y crecer según los resultados.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Conocer el costo evita sorpresas y ayuda a calcular si el anuncio está dando ganancias.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Crédito o suscripción mensual · empieza poco a poco · mide el retorno.</p></div></div></div></div>
+<div class="topic-item"><button class="w-full px-6 py-4 flex items-center space-x-3 hover:bg-dark-700/50 transition-colors text-left" onclick="toggleTopic(this)"><span class="w-6 h-6 rounded-full bg-amber-500/20 text-amber-400 text-sm font-bold flex items-center justify-center flex-shrink-0">6</span><span class="text-lg">🚀</span><div><span class="font-medium">Probar, medir, escalar</span><span class="text-neutral-500 text-sm ml-2">- el ciclo que multiplica</span></div></button><div class="topic-explanation px-6 pb-4"><div class="bg-dark-700/50 rounded-lg p-4 space-y-3 ml-9"><div><span class="text-amber-400 font-semibold">Qué es:</span><p class="text-neutral-300 text-sm">Publicar tus variaciones, ver cuál vende, invertir más dinero en la ganadora y repetir el proceso.</p></div><div><span class="text-amber-400 font-semibold">Por qué aprender:</span><p class="text-neutral-300 text-sm">Así es como el método entero se paga solo: solo escalas lo que ya demostró que funciona.</p></div><div><span class="text-amber-400 font-semibold">Conceptos clave:</span><p class="text-neutral-300 text-sm">Probar → medir → escalar al ganador → repetir.</p></div></div></div></div>
+</div>
+<div class="p-4 bg-dark-700/30 flex justify-start space-x-3">
+<button class="px-4 py-2 text-sm bg-dark-600 hover:bg-dark-500 rounded-lg transition-colors" onclick="openModal('modal-4-3')">Ver en modal</button>
+<a class="px-4 py-2 text-sm bg-amber-600 hover:bg-amber-500 text-white rounded-lg transition-colors" href="modulo-4-3.html">Ver completo</a>
+</div>
+</div>
+<div class="flex flex-col sm:flex-row gap-4 mt-10">
+<a class="flex-1 text-center px-6 py-3 bg-dark-700 text-neutral-300 rounded-lg font-semibold hover:bg-dark-600 transition-colors" href="../trilha3/index.html">← Trilha 3</a>
+<a class="flex-1 text-center px-6 py-3 bg-amber-600 text-white rounded-lg font-semibold hover:bg-amber-500 transition-colors" href="../../index.html">🎉 Volver al inicio</a>
+</div>
+</main>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-1" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.1</span><span class="font-semibold">El flujo con IA</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-1.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-2" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.2</span><span class="font-semibold">Actor y voz: la voz lo es todo</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-2.html"></iframe></div></div>
+<div class="modal hidden fixed inset-0 z-50 flex items-center justify-center p-2 sm:p-4 bg-black/80" id="modal-4-3" onclick="if(event.target === this) closeModal()"><div class="bg-dark-800 rounded-xl w-full max-w-6xl h-[95vh] flex flex-col border border-dark-600"><div class="p-4 border-b border-dark-600 flex justify-between items-center flex-shrink-0"><div class="flex items-center space-x-3"><span class="text-amber-400 font-bold">4.3</span><span class="font-semibold">Realismo, variaciones y seguridad</span></div><button class="text-neutral-400 hover:text-white text-2xl leading-none" onclick="closeModal()">×</button></div><iframe class="flex-1 w-full rounded-b-xl" src="modulo-4-3.html"></iframe></div></div>
+<footer class="border-t border-dark-600 py-8 mt-8"><div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center text-neutral-500 text-sm"><p>Anuncios Virales con IA · <a class="text-sky-400 hover:text-sky-300" href="https://inema.club" target="_blank">INEMA.CLUB</a> · 2026</p></div></footer>
+<script>
+    function toggleTopic(button){ const t=button.closest('.topic-item'); const e=t.querySelector('.topic-explanation'); const c=button.closest('.bg-dark-800'); c.querySelectorAll('.topic-explanation.active').forEach(x=>{ if(x!==e) x.classList.remove('active'); }); e.classList.toggle('active'); }
+    function openModal(id){ const m=document.getElementById(id); if(m){ m.classList.remove('hidden'); document.body.style.overflow='hidden'; } }
+    function closeModal(){ document.querySelectorAll('.modal').forEach(m=>m.classList.add('hidden')); document.body.style.overflow='auto'; }
+    document.addEventListener('keydown', e=>{ if(e.key==='Escape') closeModal(); });
+    const themeToggle=document.getElementById('theme-toggle');
+    const di=document.getElementById('theme-toggle-dark-icon'), li=document.getElementById('theme-toggle-light-icon'), html=document.documentElement;
+    if(localStorage.getItem('theme')==='light' || (!localStorage.getItem('theme') && !html.classList.contains('dark'))){ di.classList.remove('hidden'); html.classList.remove('dark'); } else { li.classList.remove('hidden'); }
+    themeToggle.addEventListener('click', ()=>{ di.classList.toggle('hidden'); li.classList.toggle('hidden'); html.classList.toggle('dark'); localStorage.setItem('theme', html.classList.contains('dark')?'dark':'light'); });
+  </script>
+</body>
+</html>
